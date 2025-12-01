@@ -1,10 +1,29 @@
 import pandas as pd
 import geopandas as gpd
+import math
 
-from limpiar_municipios import limpiar_poblacion, limpiar_coord
+def haversine(lat1, lon1, lat2, lon2):
+    R = 6371.0
+    ...
+    return dkm
 
-def cargar_municipios_limpios():
-    return pd.read_csv("../data/datos_municipios.csv")
+def cargar_municipios(path="municipios_cyl.csv"):
+    df = pd.read_csv(path)
+    return df
 
-def cargar_municipios_shp():
-    return gpd.read_file("../data/municipios_cyl.shp")
+def cargar_candidatos(path="candidatos.csv"):
+    df = pd.read_csv(path)
+    return df
+
+def preparar_datos(df_mun, df_cand):
+    # normaliza nombres de columnas, convierte tipos, etc.
+    return df_mun, df_cand
+
+def matriz_tiempos(df_mun, df_cand, velocidad=220):
+    t = {}
+    for _, mu in df_mun.iterrows():
+        for _, ca in df_cand.iterrows():
+            d = haversine(mu.lat, mu.lon, ca.lat, ca.lon)
+            t[(mu.id, ca.id)] = (d / velocidad) * 60
+    return t
+
