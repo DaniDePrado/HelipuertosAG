@@ -9,3 +9,12 @@ SG_HGSEG,Hospital General de Segovia,hospital,Segovia,Segovia,40.9426,-4.1285,Ho
 SO_HSANTA,Hospital Santa Bárbara,hospital,Soria,Soria,41.7715,-2.4715,Hospital de Soria donde se han proyectado obras en el helipuerto.
 VA_RHORT,Hospital Universitario Río Hortega,hospital,Valladolid,Valladolid,41.6288,-4.7115,Hospital universitario de Valladolid con helipuerto.
 ZA_BENAV,Hospital Comarcal de Benavente,hospital,Benavente,Zamora,42.0023,-5.6783,"Hospital comarcal en Benavente (Zamora), candidato para cobertura en el norte de la provincia."
+AV_AREVAL,Centro sanitario de referencia en Arévalo,hospital,Arévalo,Ávila,41.0633,-4.7199,"Ubicación candidata en la segunda localidad más poblada de Ávila, para mejorar la cobertura de la zona norte de la provincia."
+BU_MIRAND,Centro sanitario de referencia en Miranda de Ebro,hospital,Miranda de Ebro,Burgos,42.6870,-2.9451,"Ubicación candidata en Miranda de Ebro, núcleo urbano importante en el noreste de Burgos."
+PA_AGUILA,Centro sanitario de referencia en Aguilar de Campoo,hospital,Aguilar de Campoo,Palencia,42.7932,-4.2622,"Ubicación candidata en Aguilar de Campoo, que refuerza la cobertura en la Montaña Palentina."
+SA_CIROD,Centro sanitario de referencia en Ciudad Rodrigo,hospital,Ciudad Rodrigo,Salamanca,40.5974,-6.5335,"Ubicación candidata en el oeste de Salamanca, próxima a la frontera con Portugal."
+SG_CUELL,Centro sanitario de referencia en Cuéllar,hospital,Cuéllar,Segovia,41.4012,-4.3118,"Ubicación candidata en Cuéllar, que mejora la cobertura en el norte de la provincia de Segovia."
+SO_ALMAZ,Centro sanitario de referencia en Almazán,hospital,Almazán,Soria,41.5028,-2.5358,"Ubicación candidata en Almazán, que mejora la cobertura en el sur de Soria."
+VA_MEDIN,Centro sanitario de referencia en Medina del Campo,hospital,Medina del Campo,Valladolid,41.3296,-4.8973,"Ubicación candidata en Medina del Campo, nodo viario importante de la provincia de Valladolid."
+ZA_ZAMOR,Centro sanitario de referencia en Zamora,hospital,Zamora,Zamora,41.5063,-5.7446,"Ubicación candidata en la capital provincial, complementando el hospital comarcal de Benavente."
+
