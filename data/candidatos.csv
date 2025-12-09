@@ -1,20 +1,78 @@
-id_candidato,nombre,tipo,municipio,provincia,latitud,longitud,nota
-AV_SONSESOLES,Hospital Nuestra Señora de Sonsoles,hospital,Ávila,Ávila,40.6659,-4.6667,"Hospital público de referencia en Ávila, dispone de helipuerto sanitario."
-BU_HUBU,Hospital Universitario de Burgos (HUBU),hospital,Burgos,Burgos,42.3619,-3.684,Hospital universitario con helipuerto en Burgos.
-LE_HULEON,Complejo Asistencial Universitario de León,hospital,León,León,42.6132,-5.5577,Hospital de referencia en León; base habitual de recursos aéreos.
-LE_BIERZO,Hospital del Bierzo,hospital,Ponferrada,León,42.5461,-6.5908,Hospital comarcal en El Bierzo; se toma el centro de Ponferrada como aproximación de coordenadas.
-PA_CAUPA,Complejo Asistencial Universitario de Palencia,hospital,Palencia,Palencia,42.0006,-4.5397,Complejo Asistencial Universitario de Palencia; coordenadas del plan de acogida de nuevos profesionales.
-SA_CHUSAL,Complejo Asistencial Universitario de Salamanca,hospital,Salamanca,Salamanca,40.964,-5.6731,"Hospital universitario de Salamanca, centro de referencia regional."
-SG_HGSEG,Hospital General de Segovia,hospital,Segovia,Segovia,40.9426,-4.1285,Hospital General de Segovia; coordenadas oficiales.
-SO_HSANTA,Hospital Santa Bárbara,hospital,Soria,Soria,41.7715,-2.4715,Hospital de Soria donde se han proyectado obras en el helipuerto.
-VA_RHORT,Hospital Universitario Río Hortega,hospital,Valladolid,Valladolid,41.6288,-4.7115,Hospital universitario de Valladolid con helipuerto.
-ZA_BENAV,Hospital Comarcal de Benavente,hospital,Benavente,Zamora,42.0023,-5.6783,"Hospital comarcal en Benavente (Zamora), candidato para cobertura en el norte de la provincia."
-AV_AREVAL,Centro sanitario de referencia en Arévalo,hospital,Arévalo,Ávila,41.0633,-4.7199,"Ubicación candidata en la segunda localidad más poblada de Ávila, para mejorar la cobertura de la zona norte de la provincia."
-BU_MIRAND,Centro sanitario de referencia en Miranda de Ebro,hospital,Miranda de Ebro,Burgos,42.6870,-2.9451,"Ubicación candidata en Miranda de Ebro, núcleo urbano importante en el noreste de Burgos."
-PA_AGUILA,Centro sanitario de referencia en Aguilar de Campoo,hospital,Aguilar de Campoo,Palencia,42.7932,-4.2622,"Ubicación candidata en Aguilar de Campoo, que refuerza la cobertura en la Montaña Palentina."
-SA_CIROD,Centro sanitario de referencia en Ciudad Rodrigo,hospital,Ciudad Rodrigo,Salamanca,40.5974,-6.5335,"Ubicación candidata en el oeste de Salamanca, próxima a la frontera con Portugal."
-SG_CUELL,Centro sanitario de referencia en Cuéllar,hospital,Cuéllar,Segovia,41.4012,-4.3118,"Ubicación candidata en Cuéllar, que mejora la cobertura en el norte de la provincia de Segovia."
-SO_ALMAZ,Centro sanitario de referencia en Almazán,hospital,Almazán,Soria,41.5028,-2.5358,"Ubicación candidata en Almazán, que mejora la cobertura en el sur de Soria."
-VA_MEDIN,Centro sanitario de referencia en Medina del Campo,hospital,Medina del Campo,Valladolid,41.3296,-4.8973,"Ubicación candidata en Medina del Campo, nodo viario importante de la provincia de Valladolid."
-ZA_ZAMOR,Centro sanitario de referencia en Zamora,hospital,Zamora,Zamora,41.5063,-5.7446,"Ubicación candidata en la capital provincial, complementando el hospital comarcal de Benavente."
-
+id,nombre,tipo,municipio,provincia,lat,lon,nota
+5019,Base ÁVILA,Aerodromo/Helipuerto,ÁVILA,ÁVILA,40.65587,-4.697713,Candidato Top 8 Poblacion
+5016,Base ARÉVALO,Aerodromo/Helipuerto,ARÉVALO,ÁVILA,41.065505,-4.718925,Candidato Top 8 Poblacion
+5014,Base ARENAS DE SAN PEDRO,Aerodromo/Helipuerto,ARENAS DE SAN PEDRO,ÁVILA,40.208689,-5.091146,Candidato Top 8 Poblacion
+5168,Base LAS NAVAS DEL MARQUÉS,Aerodromo/Helipuerto,LAS NAVAS DEL MARQUÉS,ÁVILA,40.603046,-4.326009,Candidato Top 8 Poblacion
+5047,Base CANDELEDA,Aerodromo/Helipuerto,CANDELEDA,ÁVILA,40.152483,-5.239149,Candidato Top 8 Poblacion
+5240,Base SOTILLO DE LA ADRADA,Aerodromo/Helipuerto,SOTILLO DE LA ADRADA,ÁVILA,40.292542,-4.580612,Candidato Top 8 Poblacion
+5241,Base EL TIEMBLO,Aerodromo/Helipuerto,EL TIEMBLO,ÁVILA,40.415683,-4.500749,Candidato Top 8 Poblacion
+5057,Base CEBREROS,Aerodromo/Helipuerto,CEBREROS,ÁVILA,40.454779,-4.464399,Candidato Top 8 Poblacion
+9059,Base BURGOS,Aerodromo/Helipuerto,BURGOS,BURGOS,42.34113,-3.704198,Candidato Top 8 Poblacion
+9219,Base MIRANDA DE EBRO,Aerodromo/Helipuerto,MIRANDA DE EBRO,BURGOS,42.680521,-2.952396,Candidato Top 8 Poblacion
+9018,Base ARANDA DE DUERO,Aerodromo/Helipuerto,ARANDA DE DUERO,BURGOS,41.67155,-3.689244,Candidato Top 8 Poblacion
+9056,Base BRIVIESCA,Aerodromo/Helipuerto,BRIVIESCA,BURGOS,42.54898,-3.323904,Candidato Top 8 Poblacion
+9209,Base MEDINA DE POMAR,Aerodromo/Helipuerto,MEDINA DE POMAR,BURGOS,42.928523,-3.487503,Candidato Top 8 Poblacion
+9410,Base VALLE DE MENA,Aerodromo/Helipuerto,VALLE DE MENA,BURGOS,43.099086,-3.280765,Candidato Top 8 Poblacion
+9903,Base VILLARCAYO DE MERINDAD DE CASTILLA LA VIEJA,Aerodromo/Helipuerto,VILLARCAYO DE MERINDAD DE CASTILLA LA VIEJA,BURGOS,42.938486,-3.57246,Candidato Top 8 Poblacion
+9194,Base LERMA,Aerodromo/Helipuerto,LERMA,BURGOS,42.02736,-3.759314,Candidato Top 8 Poblacion
+24089,Base LEÓN,Aerodromo/Helipuerto,LEÓN,LEÓN,42.599121,-5.567076,Candidato Top 8 Poblacion
+24142,Base SAN ANDRÉS DEL RABANEDO,Aerodromo/Helipuerto,SAN ANDRÉS DEL RABANEDO,LEÓN,42.611173,-5.615482,Candidato Top 8 Poblacion
+24222,Base VILLAQUILAMBRE,Aerodromo/Helipuerto,VILLAQUILAMBRE,LEÓN,42.646313,-5.55877,Candidato Top 8 Poblacion
+24008,Base ASTORGA,Aerodromo/Helipuerto,ASTORGA,LEÓN,42.457631,-6.057144,Candidato Top 8 Poblacion
+24010,Base LA BAÑEZA,Aerodromo/Helipuerto,LA BAÑEZA,LEÓN,42.29655,-5.899119,Candidato Top 8 Poblacion
+24189,Base VALVERDE DE LA VIRGEN,Aerodromo/Helipuerto,VALVERDE DE LA VIRGEN,LEÓN,42.56918,-5.682925,Candidato Top 8 Poblacion
+24202,Base VILLABLINO,Aerodromo/Helipuerto,VILLABLINO,LEÓN,42.939834,-6.317,Candidato Top 8 Poblacion
+24163,Base SARIEGOS,Aerodromo/Helipuerto,SARIEGOS,LEÓN,42.647374,-5.631149,Candidato Top 8 Poblacion
+34120,Base PALENCIA,Aerodromo/Helipuerto,PALENCIA,PALENCIA,42.007837,-4.534601,Candidato Top 8 Poblacion
+34004,Base AGUILAR DE CAMPOO,Aerodromo/Helipuerto,AGUILAR DE CAMPOO,PALENCIA,42.792646,-4.259938,Candidato Top 8 Poblacion
+34225,Base VILLAMURIEL DE CERRATO,Aerodromo/Helipuerto,VILLAMURIEL DE CERRATO,PALENCIA,41.947956,-4.515428,Candidato Top 8 Poblacion
+34023,Base VENTA DE BAÑOS,Aerodromo/Helipuerto,VENTA DE BAÑOS,PALENCIA,41.92284,-4.497346,Candidato Top 8 Poblacion
+34080,Base GUARDO,Aerodromo/Helipuerto,GUARDO,PALENCIA,42.788941,-4.84151,Candidato Top 8 Poblacion
+34157,Base SALDAÑA,Aerodromo/Helipuerto,SALDAÑA,PALENCIA,42.522062,-4.735138,Candidato Top 8 Poblacion
+34079,Base GRIJOTA,Aerodromo/Helipuerto,GRIJOTA,PALENCIA,42.053985,-4.581755,Candidato Top 8 Poblacion
+34069,Base DUEÑAS,Aerodromo/Helipuerto,DUEÑAS,PALENCIA,41.877928,-4.545298,Candidato Top 8 Poblacion
+37274,Base SALAMANCA,Aerodromo/Helipuerto,SALAMANCA,SALAMANCA,40.967368,-5.665381,Candidato Top 8 Poblacion
+37294,Base SANTA MARTA DE TORMES,Aerodromo/Helipuerto,SANTA MARTA DE TORMES,SALAMANCA,40.949683,-5.631074,Candidato Top 8 Poblacion
+37046,Base BÉJAR,Aerodromo/Helipuerto,BÉJAR,SALAMANCA,40.387034,-5.767484,Candidato Top 8 Poblacion
+37107,Base CIUDAD RODRIGO,Aerodromo/Helipuerto,CIUDAD RODRIGO,SALAMANCA,40.597312,-6.534158,Candidato Top 8 Poblacion
+37354,Base VILLAMAYOR,Aerodromo/Helipuerto,VILLAMAYOR,SALAMANCA,40.999644,-5.696926,Candidato Top 8 Poblacion
+37085,Base CARBAJOSA DE LA SAGRADA,Aerodromo/Helipuerto,CARBAJOSA DE LA SAGRADA,SALAMANCA,40.932947,-5.651181,Candidato Top 8 Poblacion
+37362,Base VILLARES DE LA REINA,Aerodromo/Helipuerto,VILLARES DE LA REINA,SALAMANCA,41.009096,-5.649061,Candidato Top 8 Poblacion
+37246,Base PEÑARANDA DE BRACAMONTE,Aerodromo/Helipuerto,PEÑARANDA DE BRACAMONTE,SALAMANCA,40.901737,-5.200546,Candidato Top 8 Poblacion
+40194,Base SEGOVIA,Aerodromo/Helipuerto,SEGOVIA,SEGOVIA,40.94987,-4.125241,Candidato Top 8 Poblacion
+40076,Base EL ESPINAR,Aerodromo/Helipuerto,EL ESPINAR,SEGOVIA,40.718093,-4.24753,Candidato Top 8 Poblacion
+40063,Base CUÉLLAR,Aerodromo/Helipuerto,CUÉLLAR,SEGOVIA,41.403698,-4.317391,Candidato Top 8 Poblacion
+40155,Base PALAZUELOS DE ERESMA,Aerodromo/Helipuerto,PALAZUELOS DE ERESMA,SEGOVIA,40.930552,-4.061178,Candidato Top 8 Poblacion
+40181,Base REAL SITIO DE SAN ILDEFONSO,Aerodromo/Helipuerto,REAL SITIO DE SAN ILDEFONSO,SEGOVIA,40.897628,-4.004759,Candidato Top 8 Poblacion
+40112,Base LA LASTRILLA,Aerodromo/Helipuerto,LA LASTRILLA,SEGOVIA,40.968941,-4.103757,Candidato Top 8 Poblacion
+40040,Base CANTALEJO,Aerodromo/Helipuerto,CANTALEJO,SEGOVIA,41.258455,-3.927067,Candidato Top 8 Poblacion
+40906,Base SAN CRISTÓBAL DE SEGOVIA,Aerodromo/Helipuerto,SAN CRISTÓBAL DE SEGOVIA,SEGOVIA,40.952063,-4.075792,Candidato Top 8 Poblacion
+42173,Base SORIA,Aerodromo/Helipuerto,SORIA,SORIA,41.763279,-2.466248,Candidato Top 8 Poblacion
+42020,Base ALMAZÁN,Aerodromo/Helipuerto,ALMAZÁN,SORIA,41.486994,-2.53291,Candidato Top 8 Poblacion
+42043,Base BURGO DE OSMA-CIUDAD DE OSMA,Aerodromo/Helipuerto,BURGO DE OSMA-CIUDAD DE OSMA,SORIA,41.585776,-3.071508,Candidato Top 8 Poblacion
+42134,Base ÓLVEGA,Aerodromo/Helipuerto,ÓLVEGA,SORIA,41.780458,-1.982666,Candidato Top 8 Poblacion
+42004,Base ÁGREDA,Aerodromo/Helipuerto,ÁGREDA,SORIA,41.85517,-1.919656,Candidato Top 8 Poblacion
+42095,Base GOLMAYO,Aerodromo/Helipuerto,GOLMAYO,SORIA,41.765435,-2.524146,Candidato Top 8 Poblacion
+42162,Base SAN ESTEBAN DE GORMAZ,Aerodromo/Helipuerto,SAN ESTEBAN DE GORMAZ,SORIA,41.575287,-3.208325,Candidato Top 8 Poblacion
+42164,Base SAN LEONARDO DE YAGÜE,Aerodromo/Helipuerto,SAN LEONARDO DE YAGÜE,SORIA,41.829305,-3.066742,Candidato Top 8 Poblacion
+47186,Base VALLADOLID,Aerodromo/Helipuerto,VALLADOLID,VALLADOLID,41.652328,-4.723349,Candidato Top 8 Poblacion
+47076,Base LAGUNA DE DUERO,Aerodromo/Helipuerto,LAGUNA DE DUERO,VALLADOLID,41.583318,-4.722149,Candidato Top 8 Poblacion
+47010,Base ARROYO DE LA ENCOMIENDA,Aerodromo/Helipuerto,ARROYO DE LA ENCOMIENDA,VALLADOLID,41.609108,-4.797806,Candidato Top 8 Poblacion
+47085,Base MEDINA DEL CAMPO,Aerodromo/Helipuerto,MEDINA DEL CAMPO,VALLADOLID,41.307578,-4.915187,Candidato Top 8 Poblacion
+47052,Base CISTÉRNIGA,Aerodromo/Helipuerto,CISTÉRNIGA,VALLADOLID,41.612284,-4.685702,Candidato Top 8 Poblacion
+47175,Base TUDELA DE DUERO,Aerodromo/Helipuerto,TUDELA DE DUERO,VALLADOLID,41.584008,-4.58001,Candidato Top 8 Poblacion
+47165,Base TORDESILLAS,Aerodromo/Helipuerto,TORDESILLAS,VALLADOLID,41.502023,-5.001276,Candidato Top 8 Poblacion
+47075,Base ÍSCAR,Aerodromo/Helipuerto,ÍSCAR,VALLADOLID,41.364199,-4.530714,Candidato Top 8 Poblacion
+49275,Base ZAMORA,Aerodromo/Helipuerto,ZAMORA,ZAMORA,41.49914,-5.754948,Candidato Top 8 Poblacion
+49021,Base BENAVENTE,Aerodromo/Helipuerto,BENAVENTE,ZAMORA,42.001729,-5.680069,Candidato Top 8 Poblacion
+49219,Base TORO,Aerodromo/Helipuerto,TORO,ZAMORA,41.51991,-5.394642,Candidato Top 8 Poblacion
+49127,Base MORALES DEL VINO,Aerodromo/Helipuerto,MORALES DEL VINO,ZAMORA,41.446216,-5.730921,Candidato Top 8 Poblacion
+49125,Base MORALEJA DEL VINO,Aerodromo/Helipuerto,MORALEJA DEL VINO,ZAMORA,41.462369,-5.656529,Candidato Top 8 Poblacion
+49261,Base VILLARALBO,Aerodromo/Helipuerto,VILLARALBO,ZAMORA,41.491481,-5.682754,Candidato Top 8 Poblacion
+49081,Base FUENTESAÚCO,Aerodromo/Helipuerto,FUENTESAÚCO,ZAMORA,41.231354,-5.495629,Candidato Top 8 Poblacion
+49250,Base VILLALPANDO,Aerodromo/Helipuerto,VILLALPANDO,ZAMORA,41.864879,-5.414703,Candidato Top 8 Poblacion
+24115,Base PONFERRADA,Aerodromo/Helipuerto,PONFERRADA,LEÓN,42.547681,-6.5973,Candidato Top 8 Poblacion
+24014,Base BEMBIBRE,Aerodromo/Helipuerto,BEMBIBRE,LEÓN,42.615067,-6.416706,Candidato Top 8 Poblacion
+24030,Base CACABELOS,Aerodromo/Helipuerto,CACABELOS,LEÓN,42.599569,-6.725968,Candidato Top 8 Poblacion
+24070,Base FABERO,Aerodromo/Helipuerto,FABERO,LEÓN,42.763088,-6.628094,Candidato Top 8 Poblacion
+24209,Base VILLAFRANCA DEL BIERZO,Aerodromo/Helipuerto,VILLAFRANCA DEL BIERZO,LEÓN,42.605994,-6.810821,Candidato Top 8 Poblacion
