@@ -1,0 +1,38 @@
+<project name="HelipuertosAG" default="run" basedir=".">
+
+    <property name="src.dir" value="src"/>
+    <property name="data.dir" value="data"/>
+    <property name="maps.dir" value="maps"/>
+
+    <property name="python.exe" value="python3"/>
+
+    <target name="init">
+        <mkdir dir="${maps.dir}"/>
+    </target>
+
+    <target name="run" depends="init" description="Ejecuta el script main.py">
+        <echo message="--- Iniciando el Sistema de Optimización ---"/>
+        <echo message="Ejecutando: ${python.exe} ${src.dir}/main.py"/>
+        
+        <exec executable="${python.exe}" failonerror="true">
+            <arg value="${src.dir}/main.py"/>
+        </exec>
+        
+        <echo message="--- Ejecución completada. Revisa la carpeta ${maps.dir} ---"/>
+    </target>
+
+    <target name="clean" description="Elimina CSV, mapas y gráficos generados">
+        <echo message="--- Limpiando archivos generados ---"/>
+
+        <delete file="${data.dir}/solucion_asignaciones.csv" quiet="true"/>
+        <echo message="Eliminado: ${data.dir}/solucion_asignaciones.csv"/>
+
+        <delete includeemptydirs="true" quiet="true">
+            <fileset dir="${maps.dir}" includes="*"/>
+        </delete>
+        <echo message="Limpia: Carpeta ${maps.dir}"/>
+
+        <echo message="--- Limpieza finalizada ---"/>
+    </target>
+
+</project>
