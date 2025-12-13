@@ -24,7 +24,7 @@ def limpiar_coord(valor):
     return valor
 
 
-# Abrimos el fichero original y detectamos el separador (coma, punto y coma, etc.)
+# Abrimos el fichero original y detectamos el separador 
 with open(INPUT_FILE, "r", encoding="utf-8-sig", newline="") as f_in:
     muestra = f_in.read(2048)
     f_in.seek(0)
@@ -33,13 +33,13 @@ with open(INPUT_FILE, "r", encoding="utf-8-sig", newline="") as f_in:
     try:
         dialect = sniffer.sniff(muestra)
     except csv.Error:
-        # Si no consigue detectar, por defecto usamos ';'
+        # Si no consigue detectar, por defecto usamos ;
         dialect = csv.excel
         dialect.delimiter = ';'
 
     reader = csv.DictReader(f_in, dialect=dialect)
 
-    # Creamos el fichero de salida
+    #Creamos el fichero de salida
     with open(OUTPUT_FILE, "w", encoding="utf-8", newline="") as f_out:
         writer = csv.writer(f_out, delimiter=',')
         # Cabecera estándar
@@ -55,4 +55,4 @@ with open(INPUT_FILE, "r", encoding="utf-8-sig", newline="") as f_in:
 
             writer.writerow([cod_ine, municipio, provincia, poblacion, latitud, longitud])
 
-print("✅ He creado el archivo", OUTPUT_FILE)
+print("He creado el archivo", OUTPUT_FILE)

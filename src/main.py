@@ -22,15 +22,15 @@ except ImportError:
 
 def main():
     print("=========================================================")
-    print("     PROYECTO HELICYL: EJECUCIÓN                         ")
+    print("     PROYECTO HELICYL                      ")
     print("=========================================================")
 
     # ANÁLISIS PREVIO 
-    print("\nGenerando mapas de análisis inicial (ANTES)...")
+    print("\nGenerando mapas de análisis inicial ...")
     try:
         generar_analisis_previo()
     except Exception as e:
-        print(f" Aviso: No se pudo generar el análisis previo ({e})")
+        print(f" No se pudo generar el análisis previo ({e})")
         print("(Esto no afecta al cálculo del modelo, continuamos...)")
 
     # GENERACIÓN DE CANDIDATOS 
@@ -69,7 +69,7 @@ def main():
     for esc in escenarios:
         print(f"\n   --- Procesando Escenario: {esc['nombre']} ---")
         
-        # 1. Ejecutar el modelo matemático
+        # Ejecutar el modelo matemático
         bases, df_res = modelo.resolver_modelo(
             df_mun, df_cand, tiempos, 
             peso_tiempo=esc['w_t'], 
@@ -91,7 +91,6 @@ def main():
             suffixes=('_mun', '_base')
         )
         
-        # 3. TRADUCIR COLUMNAS 
         df_final = df_final.rename(columns={
             'lat_mun': 'lat_muni',
             'lon_mun': 'lon_muni',
@@ -109,14 +108,14 @@ def main():
         df_final.to_csv(fichero, index=False, sep=',', encoding='utf-8')
         print(f" Solución guardada en: {fichero}")
         
-        # 4. VISUALIZACIÓN
+        # Ver
         print(f"Generando mapas visuales...")
         try:
             generar_mapas_y_graficos(fichero)
         except Exception as e:
             print(f"Error visualización: {e}")
 
-        # 5. Estadísticas
+        # Estadísticas
         t_medio = df_final['tiempo_minutos'].mean()
         pob_cubierta = df_final[df_final['tiempo_minutos'] <= 15]['poblacion'].sum()
         pct_cobertura = (pob_cubierta / df_final['poblacion'].sum()) * 100

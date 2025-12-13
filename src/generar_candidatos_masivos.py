@@ -1,7 +1,7 @@
 import pandas as pd
 import os
 
-# --- CONFIGURACIÓN DE RUTAS ---
+# -
 # Como este archivo está en 'src/', tenemos que subir un nivel para llegar a la raíz
 SRC_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(SRC_DIR)
@@ -10,15 +10,14 @@ DATA_DIR = os.path.join(ROOT_DIR, "data")
 MUNIC_CSV = os.path.join(DATA_DIR, "municipios_cyl.csv")
 CAND_CSV = os.path.join(DATA_DIR, "candidatos.csv")
 
-# CONFIGURACIÓN: ¿Cuántos pueblos grandes cogemos por provincia?
-TOP_N = 8  # Con 8 por provincia tendremos ~80 candidatos. ¡Suficiente!
+TOP_N = 8  # Con 8 por provincia tendremos ~80 candidatos
 
 def generar_masivos():
-    print(f"--- Generando Top {TOP_N} Candidatos por Provincia ---")
+    print(f" Generando Top {TOP_N} Candidatos por Provincia")
     
     # 1. Cargar Municipios (con el separador correcto)
     if not os.path.exists(MUNIC_CSV):
-        print(f"❌ Error: No encuentro el archivo en {MUNIC_CSV}")
+        print(f"Error: No encuentro el archivo en {MUNIC_CSV}")
         return
 
     try:
@@ -26,7 +25,7 @@ def generar_masivos():
     except:
         df_m = pd.read_csv(MUNIC_CSV, sep=',', encoding='utf-8')
         
-    # Limpieza rápida de columnas para que no falle
+    # Limpieza rapida de columnas para que no falle
     df_m.columns = df_m.columns.str.strip().str.lower().str.replace('ó','o').str.replace('á','a')
     
     # Mapeo flexible
@@ -38,7 +37,7 @@ def generar_masivos():
     }
     df_m.rename(columns=mapa, inplace=True)
     
-    # 2. Lógica del Bierzo (Importante mantenerla)
+    # Lógica del Bierzo 
     def get_region(row):
         nombre = str(row['nombre']).upper()
         # Lista rápida de municipios del Bierzo para separarlos
@@ -49,7 +48,7 @@ def generar_masivos():
     
     df_m['region_temp'] = df_m.apply(get_region, axis=1)
     
-    # 3. Selección de Candidatos
+    # Selección de Candidatoss
     nuevos_candidatos = []
     
     # Para cada región (Ávila, Burgos... El Bierzo), cogemos los N más grandes
@@ -73,7 +72,7 @@ def generar_masivos():
     
     # 4. Guardar
     df_final.to_csv(CAND_CSV, index=False, sep=',')
-    print(f"✅ ¡Hecho! Archivo actualizado en: {CAND_CSV}")
+    print(f"Archivo actualizado en: {CAND_CSV}")
     print(f"   -> Total candidatos: {len(df_final)}")
 
 if __name__ == "__main__":
