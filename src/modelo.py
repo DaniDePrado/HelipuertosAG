@@ -4,7 +4,7 @@ import pandas as pd
 def resolver_modelo(df_mun, df_cand, matriz_tiempos, peso_tiempo=1.0, peso_cobertura=0.0, radio_ideal_km=30):
     """
     Solver P-Mediana Multiobjetivo.
-    Versión optimizada: Acepta soluciones 'Feasible' (válidas) si se agota el tiempo.
+    
     """
     #Aqui lo que conseguimos es imprimir los pesos utlizados en el escenario en el que estamos.
     print(f"\n[SOLVER] Optimizando... (W_Tiempo: {peso_tiempo}, W_Cobertura: {peso_cobertura})")
@@ -27,7 +27,7 @@ def resolver_modelo(df_mun, df_cand, matriz_tiempos, peso_tiempo=1.0, peso_cober
 
     #Intentamos minimizar el tiempo de respuesta ponderado por poblacion
     coste_tiempo = pulp.lpSum([pob[i] * matriz_tiempos[(i,j)] * x[i][j] for i in I for j in J])
-    penalizacion_cobertura = pulp.lpSum([pob[i] * z[i] for i in I]) * 50 #Esta parte la usamos para intentar minimizar lo maximo posible la poblacion no cubierta dentro del radio
+    penalizacion_cobertura = pulp.lpSum([pob[i] * z[i] for i in I]) * 50000 #Esta parte la usamos para intentar minimizar lo maximo posible la poblacion no cubierta dentro del radio
     prob += peso_tiempo * coste_tiempo + peso_cobertura * penalizacion_cobertura
 
    #Declaramos las restricciones
@@ -69,7 +69,7 @@ def resolver_modelo(df_mun, df_cand, matriz_tiempos, peso_tiempo=1.0, peso_cober
     bases = [j for j in J if pulp.value(y[j]) > 0.5]
     
     if len(bases) != 10:
-        print(f" Aviso: Se seleccionaron {len(bases)} bases (se esperaban 10). Revisa resultados.")
+        print(f" Aviso: Se seleccionaron {len(bases)} bases Revisar resultados")
 
     res = []
     for i in I:
