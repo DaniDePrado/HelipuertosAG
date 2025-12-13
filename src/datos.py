@@ -3,7 +3,6 @@ import numpy as np
 import math
 import os
 
-# --- CONFIGURACIÓN ---
 # Ajustamos para buscar en la carpeta 'data' que está un nivel arriba
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 ARCHIVO_MUNICIPIOS = os.path.join(BASE_DIR, "data", "municipios_cyl.csv")
@@ -18,7 +17,7 @@ def haversine(lat1, lon1, lat2, lon2):
         d_lon = math.radians(lon2 - lon1)
         a = (math.sin(d_lat / 2) ** 2 +
              math.cos(math.radians(lat1)) * math.cos(math.radians(lat2)) *
-             math.sin(d_lon / 2) ** 2)
+             math.sin(d_lon / 2) ** 2) #Aplicamos la formula de Haversine
         c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
         return R * c
     except Exception:
@@ -46,9 +45,8 @@ def cargar_datos():
     if not os.path.exists(ARCHIVO_MUNICIPIOS):
         raise FileNotFoundError(f"¡Falta {ARCHIVO_MUNICIPIOS}!")
     
-    # Cargar Municipios (con separador ;)
+    # Carga municipios
     df_m = pd.read_csv(ARCHIVO_MUNICIPIOS, sep=';', encoding='utf-8')
-    # Limpieza de columnas
     df_m.columns = df_m.columns.str.strip().str.lower().str.replace('ó','o').str.replace('á','a')
     
     mapa_m = {
@@ -58,7 +56,7 @@ def cargar_datos():
     }
     df_m.rename(columns=mapa_m, inplace=True)
     
-    # Cargar Candidatos
+    # Cargamos los candidatos
     if not os.path.exists(ARCHIVO_CANDIDATOS):
         raise FileNotFoundError(f"¡Falta {ARCHIVO_CANDIDATOS}!")
         
@@ -72,7 +70,6 @@ def cargar_datos():
     mapa_c = {'id_candidato': 'id', 'codigo': 'id', 'latitud': 'lat', 'longitud': 'lon', 'provincia': 'provincia', 'nombre': 'nombre'}
     df_c.rename(columns=mapa_c, inplace=True)
     
-    # --- TRUCO DEL BIERZO (CRÍTICO) ---
     def asignar_region(row):
         texto = str(row).upper()
         if 'BIERZO' in texto or 'PONFERRADA' in texto: return 'El Bierzo'
@@ -80,5 +77,5 @@ def cargar_datos():
     
     df_c['region'] = df_c.apply(asignar_region, axis=1)
     
-    print(f"✅ Datos listos: {len(df_m)} mun, {len(df_c)} cands. Regiones: {len(df_c['region'].unique())}")
+    print(f" Datos listos: {len(df_m)} mun, {len(df_c)} cands. Regiones: {len(df_c['region'].unique())}")
     return df_m, df_c

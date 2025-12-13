@@ -5,7 +5,7 @@ import math
 import os
 import pulp
 
-# --- FUNCIONES AUXILIARES (Las dejamos fuera o dentro, da igual) ---
+#Calculamos la distancia del radio maximo, entre dos puntos dados. Gracias a sus coordenadas de latitud y longitud
 def haversine(lat1, lon1, lat2, lon2):
     R = 6371.0
     phi1 = math.radians(lat1); phi2 = math.radians(lat2)
@@ -21,29 +21,24 @@ def ejecutar_modelo():
     """
     print("--- INICIANDO MODELO P-MEDIANA ---")
     
-    # CONFIGURACIÓN DE RUTAS
     # Usamos rutas absolutas basadas en la ubicación de este script para evitar errores
     BASE_DIR = os.path.dirname(os.path.abspath(__file__)) # Carpeta src
     DATA_DIR = os.path.join(os.path.dirname(BASE_DIR), "data") # Carpeta data
     OUTPUT_FILE = os.path.join(DATA_DIR, "solucion_asignaciones.csv")
 
-    if not os.path.exists(DATA_DIR):
+    if not os.path.exists(DATA_DIR): #Comprobamos que la carpeta data exista
         print(f"Error: No se encuentra la carpeta data en {DATA_DIR}")
         return None
 
-    # 1. CARGA DE DATOS
+    # Cargamos los datos
     try:
-        municipios = pd.read_csv(os.path.join(DATA_DIR, "datos_municipios.csv"))
-        candidatos = pd.read_csv(os.path.join(DATA_DIR, "candidatos.csv"))
+        municipios = pd.read_csv(os.path.join(DATA_DIR, "datos_municipios.csv")) #Listado de municipios
+        candidatos = pd.read_csv(os.path.join(DATA_DIR, "candidatos.csv")) #Listado de candidatos a donde poner los helipuertos
     except FileNotFoundError as e:
         print(f"Error cargando CSVs: {e}")
         return None
-
-    # (Aquí va todo el código de limpieza y normalización que ya tenías...)
-    # ... [CÓDIGO DE LIMPIEZA RESUMIDO PARA BREVEDAD, USA EL QUE YA TIENES] ...
-    # Asegúrate de usar las columnas correctas como hicimos en la versión anterior
-    
-    # Normalización rápida para asegurar que funcione
+ 
+    # Nos aseguramos de su funcion
     def clean_cols(df):
         df.columns = df.columns.str.lower()
         rename_map = {}
@@ -58,7 +53,7 @@ def ejecutar_modelo():
     municipios = clean_cols(municipios)
     candidatos = clean_cols(candidatos)
 
-    # 2. CÁLCULO DISTANCIAS
+    # Calculamos las distancias
     VEL = 220.0
     I = municipios['id'].tolist()
     J = candidatos['id'].tolist()
@@ -66,10 +61,10 @@ def ejecutar_modelo():
     t = {}
     d = {}
     
-    # Optimizamos diccionarios para acceso rápido
     mun_dict = municipios.set_index('id').to_dict('index')
     cand_dict = candidatos.set_index('id').to_dict('index')
 
+    # Bucle para calcular la matriz de distancias y tiempos entre todos los municipios  y todos los candidatos a base
     for i in I:
         for j in J:
             dist = haversine(mun_dict[i]['lat'], mun_dict[i]['lon'], 
@@ -77,25 +72,27 @@ def ejecutar_modelo():
             d[(i,j)] = dist
             t[(i,j)] = (dist / VEL) * 60
 
-    # 3. MODELO PULP
-    P = 10
-    prob = pulp.LpProblem("p_mediana", pulp.LpMinimize)
+    #El modelo PuLP
+    P = 10 #Numero de bases
+    prob = pulp.LpProblem("p_mediana", pulp.LpMinimize) 
+
+    #Variables de decision
     x = pulp.LpVariable.dicts("x", J, cat="Binary")
     y = pulp.LpVariable.dicts("y", (I, J), cat="Binary")
 
-    # Objetivo
+    #Nuestra funcion objetivo
     prob += pulp.lpSum([mun_dict[i]['pob'] * t[(i,j)] * y[i][j] for i in I for j in J])
 
-    # Restricciones
+    # Restricciones, la cual es cada municipio debe asignarse a exactamente una base
     for i in I: prob += pulp.lpSum(y[i][j] for j in J) == 1
     for i in I:
         for j in J: prob += y[i][j] <= x[j]
     prob += pulp.lpSum(x[j] for j in J) == P
 
-    solver = pulp.PULP_CBC_CMD(msg=False)
+    solver = pulp.PULP_CBC_CMD(msg=False) #Resolucion
     prob.solve(solver)
 
-    # 4. EXPORTAR
+    # Comprobamos que el estado del solver sea el optimo
     if pulp.LpStatus[prob.status] == 'Optimal':
         asignaciones = []
         for i in I:
@@ -115,7 +112,7 @@ def ejecutar_modelo():
                         "distancia_km": d[(i,j)]
                     })
         
-        df_out = pd.DataFrame(asignaciones)
+        df_out = pd.DataFrame(asignaciones) #Creamos un DataFrama y guardamos en el archivo CSV de salida
         df_out.to_csv(OUTPUT_FILE, index=False)
         print(f"Modelo completado. Solución guardada en: {OUTPUT_FILE}")
         return OUTPUT_FILE
