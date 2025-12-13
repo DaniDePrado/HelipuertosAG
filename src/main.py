@@ -59,7 +59,7 @@ def main():
     escenarios = [
         {"nombre": "A_Eficiencia", "w_t": 1.0, "w_c": 0.0},
         {"nombre": "B_Equilibrado", "w_t": 0.5, "w_c": 0.5},
-        {"nombre": "C_Equidad",     "w_t": 0.0, "w_c": 1.0}
+        {"nombre": "C_Equidad",     "w_t": 0.01, "w_c": 1.0}
     ]
     
     resumen_global = []

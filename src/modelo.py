@@ -11,7 +11,15 @@ def resolver_modelo(df_mun, df_cand, matriz_tiempos, peso_tiempo=1.0, peso_cober
     
     I = df_mun['id'].tolist()  #Recogemos la lista de IDs de los municipios
     J = df_cand['id'].tolist() #Recogemos la lista de IDs de los candidatos a base
-    pob = dict(zip(df_mun['id'], df_mun['poblacion'])) #Esto nos sirve para saber la poblacion que hay por municipio
+    # Si estamos en el Escenario C,
+    # hacemos que todos los pueblos valgan 1. 
+    # MÁS PUEBLOS en lugar de MÁS PERSONAS.
+    if peso_tiempo < 0.1 and peso_cobertura > 0.8:
+        print("   -> MODO EQUIDAD TERRITORIAL ACTIVADO (Ignorando población real)")
+        pob = {i: 1 for i in I} 
+    else:
+        # Para los escenarios A y B, seguimos usando la población real
+        pob = dict(zip(df_mun['id'], df_mun['poblacion'])) 
     
     if 'region' not in df_cand.columns: df_cand['region'] = df_cand['provincia']
     region_cand = dict(zip(df_cand['id'], df_cand['region']))
