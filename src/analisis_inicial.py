@@ -1,85 +1,80 @@
+# src/analisis_inicial.py
 import pandas as pd
 import folium
 from folium.plugins import HeatMap
+import numpy as np  # Necesario para el cálculo logarítmico
 import os
 
-def generar_analisis_previo():
-    print("--- GENERANDO MAPAS DE ANÁLISIS INICIAL ---")
+def cargar_csv_robusto(ruta):
+    """Carga el CSV intentando adivinar el separador (; o ,)"""
+    if not os.path.exists(ruta):
+        return pd.DataFrame()
+    
+    try:
+        # Intento 1: Separador punto y coma
+        df = pd.read_csv(ruta, sep=';', encoding='utf-8')
+        if len(df.columns) > 1: return df
+        
+        # Intento 2: Separador coma
+        df = pd.read_csv(ruta, sep=',', encoding='utf-8')
+        return df
+    except:
+        return pd.DataFrame()
 
-    # 1. Configurar Rutas Relativas (Para que funcione en cualquier PC)
-    # Detectamos dónde está este archivo script (carpeta src)
+def generar_analisis_previo():
+    print("   -> Generando mapas PREVIOS (Análisis Inicial)...")
+
+    # 1. Configurar Rutas
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    # Subimos un nivel para encontrar 'data' y 'maps'
     DATA_DIR = os.path.join(BASE_DIR, '..', 'data')
     MAPS_DIR = os.path.join(BASE_DIR, '..', 'maps')
 
-    # Asegurarnos de que la carpeta maps existe
     if not os.path.exists(MAPS_DIR):
         os.makedirs(MAPS_DIR)
 
-    ruta_municipios = os.path.join(DATA_DIR, 'datos_municipios.csv')
-    ruta_candidatos = os.path.join(DATA_DIR, 'candidatos.csv')
+    # 2. Cargar Archivos
+    ruta_muni = os.path.join(DATA_DIR, 'municipios_cyl.csv')
+    if not os.path.exists(ruta_muni): 
+        ruta_muni = os.path.join(DATA_DIR, 'datos_municipios.csv')
 
-    # Verificar archivos
-    if not os.path.exists(ruta_municipios) or not os.path.exists(ruta_candidatos):
-        print(f"❌ ERROR: No encuentro los archivos en {DATA_DIR}")
+    ruta_cand = os.path.join(DATA_DIR, 'candidatos.csv')
+
+    df_muni = cargar_csv_robusto(ruta_muni)
+    df_cand = cargar_csv_robusto(ruta_cand)
+
+    if df_muni.empty:
+        print("  Error: No se pudo cargar el archivo de municipios.")
         return
 
-    # Cargar datos
-    df_municipios = pd.read_csv(ruta_municipios)
-    df_candidatos = pd.read_csv(ruta_candidatos)
+    # 3. Normalizar columnas
+    df_muni.columns = df_muni.columns.str.strip().str.lower()
+    if not df_cand.empty:
+        df_cand.columns = df_cand.columns.str.strip().str.lower()
 
-    # --- MAPA 1: SITUACIÓN INICIAL (Candidatos y Municipios Grandes) ---
-    print("Generando mapa de situación inicial...")
-    mapa = folium.Map(location=[41.6, -4.7], zoom_start=7)
+    # --- DETECCIÓN DE COLUMNAS ---
+    m_lat = 'latitud' if 'latitud' in df_muni.columns else 'lat'
+    m_lon = 'longitud' if 'longitud' in df_muni.columns else 'lon'
+    col_pob = 'poblacion' if 'poblacion' in df_muni.columns else 'habitantes'
 
-    # Pintar Candidatos (Rojo)
-    for _, row in df_candidatos.iterrows():
-        folium.Marker(
-            location=[row['latitud'], row['longitud']],
-            popup=row['nombre'],
-            icon=folium.Icon(color='red', icon='helicopter', prefix='fa')
-        ).add_to(mapa)
+    c_lat = 'latitud' if 'latitud' in df_cand.columns else 'lat'
+    c_lon = 'longitud' if 'longitud' in df_cand.columns else 'lon'
 
-    # Pintar Municipios Grandes (Azul) - Filtro > 1000 hab
-    municipios_grandes = df_municipios[df_municipios['poblacion'] > 1000]
-    for _, row in municipios_grandes.iterrows():
-        folium.CircleMarker(
-            location=[row['latitud'], row['longitud']],
-            radius=3, color='blue', fill=True, fill_color='blue',
-            popup=f"{row['municipio']} ({row['poblacion']} hab)"
-        ).add_to(mapa)
+    if m_lat not in df_muni.columns:
+        print("Error: Falta latitud en municipios.")
+        return
+    mapa_1 = folium.Map(location=[41.6, -4.7], zoom_start=7, tiles='CartoDB positron')
 
-    salida_inicial = os.path.join(MAPS_DIR, 'mapa_inicial_cyl.html')
-    mapa.save(salida_inicial)
-    print(f"✅ Mapa inicial guardado en: {salida_inicial}")
+    if not df_cand.empty:
+        for _, row in df_cand.iterrows():
+            folium.Marker(
+                location=[row[c_lat], row[c_lon]],
+                popup=f"Candidato: {row.get('nombre', 'Base')}",
+                icon=folium.Icon(color='red', icon='helicopter', prefix='fa')
+            ).add_to(mapa_1)
 
-    # --- MAPA 2: MAPA DE CALOR Y COBERTURA TEÓRICA ---
-    print("Generando mapa de calor y cobertura teórica...")
-    mapa_calor = folium.Map(location=[41.6, -4.7], zoom_start=7, tiles='CartoDB positron')
+    mapa_1.save(os.path.join(MAPS_DIR, 'mapa_inicial_cyl.html'))
 
-    # Capa de Calor (Densidad de Población)
-    datos_calor = df_municipios[['latitud', 'longitud', 'poblacion']].values.tolist()
-    HeatMap(datos_calor, radius=15, blur=20, max_zoom=1).add_to(mapa_calor)
-
-    # Círculos de Cobertura Teórica (40km) alrededor de los candidatos
-    for _, row in df_candidatos.iterrows():
-        folium.Circle(
-            location=[row['latitud'], row['longitud']],
-            radius=40000,  # 40 km
-            color='green', fill=True, fill_opacity=0.2,
-            popup='Cobertura Teórica 40km'
-        ).add_to(mapa_calor)
-        
-        # Marcador pequeño
-        folium.CircleMarker(
-            location=[row['latitud'], row['longitud']],
-            radius=2, color='red', fill=True
-        ).add_to(mapa_calor)
-
-    salida_calor = os.path.join(MAPS_DIR, 'mapa_analisis_cobertura.html')
-    mapa_calor.save(salida_calor)
-    print(f"✅ Mapa de calor guardado en: {salida_calor}")
+    print(" Mapa generado correctamente.")
 
 if __name__ == "__main__":
     generar_analisis_previo()

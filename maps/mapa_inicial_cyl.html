@@ -1,0 +1,3027 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_17f6a81e69a2ca1ab4954d7771bc8000 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_17f6a81e69a2ca1ab4954d7771bc8000" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_17f6a81e69a2ca1ab4954d7771bc8000 = L.map(
+                "map_17f6a81e69a2ca1ab4954d7771bc8000",
+                {
+                    center: [41.6, -4.7],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_648316a465641e89a9e5cb9e78590dc1 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_648316a465641e89a9e5cb9e78590dc1.addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var marker_9645fa587287d4b6e026d6448a8ef27b = L.marker(
+                [40.65587, -4.697713],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_c09908a8876a9ba411d58e908adffc10 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_09819a81efe511e4ccfa4932906a33bb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_751abec33d109ff6594ef6c33bd12504 = $(`<div id="html_751abec33d109ff6594ef6c33bd12504" style="width: 100.0%; height: 100.0%;">Candidato: Base ÁVILA</div>`)[0];
+                popup_09819a81efe511e4ccfa4932906a33bb.setContent(html_751abec33d109ff6594ef6c33bd12504);
+            
+        
+
+        marker_9645fa587287d4b6e026d6448a8ef27b.bindPopup(popup_09819a81efe511e4ccfa4932906a33bb)
+        ;
+
+        
+    
+    
+                marker_9645fa587287d4b6e026d6448a8ef27b.setIcon(icon_c09908a8876a9ba411d58e908adffc10);
+            
+    
+            var marker_4f8352a120d1dd9f41823afdb5178452 = L.marker(
+                [41.065505, -4.718925],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_a9c01cc8e309201c83e030c9474a13ab = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ebe51b71c671cf6efdaf3dc5b95e4799 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_de3d131f86db8343cb278196822b7c06 = $(`<div id="html_de3d131f86db8343cb278196822b7c06" style="width: 100.0%; height: 100.0%;">Candidato: Base ARÉVALO</div>`)[0];
+                popup_ebe51b71c671cf6efdaf3dc5b95e4799.setContent(html_de3d131f86db8343cb278196822b7c06);
+            
+        
+
+        marker_4f8352a120d1dd9f41823afdb5178452.bindPopup(popup_ebe51b71c671cf6efdaf3dc5b95e4799)
+        ;
+
+        
+    
+    
+                marker_4f8352a120d1dd9f41823afdb5178452.setIcon(icon_a9c01cc8e309201c83e030c9474a13ab);
+            
+    
+            var marker_fa1fc57c59f327d30697c416c2cc70ab = L.marker(
+                [40.208689, -5.091146],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_f5c7ff8056d093d165a815a1b729a010 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2a0b91b83056416289268c9a1a2ba4c9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_45c5171a6d403c9946cf0d5d33563743 = $(`<div id="html_45c5171a6d403c9946cf0d5d33563743" style="width: 100.0%; height: 100.0%;">Candidato: Base ARENAS DE SAN PEDRO</div>`)[0];
+                popup_2a0b91b83056416289268c9a1a2ba4c9.setContent(html_45c5171a6d403c9946cf0d5d33563743);
+            
+        
+
+        marker_fa1fc57c59f327d30697c416c2cc70ab.bindPopup(popup_2a0b91b83056416289268c9a1a2ba4c9)
+        ;
+
+        
+    
+    
+                marker_fa1fc57c59f327d30697c416c2cc70ab.setIcon(icon_f5c7ff8056d093d165a815a1b729a010);
+            
+    
+            var marker_0a88748a210147cf25fc9b5eff1a3d8f = L.marker(
+                [40.603046, -4.326009],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_91f20d58439032d85c8363036053fe01 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_570d144b8416dfb0c5fdac606fa97860 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_76502d383d07a4b3eec7469bd2567917 = $(`<div id="html_76502d383d07a4b3eec7469bd2567917" style="width: 100.0%; height: 100.0%;">Candidato: Base LAS NAVAS DEL MARQUÉS</div>`)[0];
+                popup_570d144b8416dfb0c5fdac606fa97860.setContent(html_76502d383d07a4b3eec7469bd2567917);
+            
+        
+
+        marker_0a88748a210147cf25fc9b5eff1a3d8f.bindPopup(popup_570d144b8416dfb0c5fdac606fa97860)
+        ;
+
+        
+    
+    
+                marker_0a88748a210147cf25fc9b5eff1a3d8f.setIcon(icon_91f20d58439032d85c8363036053fe01);
+            
+    
+            var marker_ff3d320f0164408e5668cc3afa8343a3 = L.marker(
+                [40.152483, -5.239149],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_697a8108a17421d05d567ec624c2104d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_507d507b208b6d6aaf27349c51cabdc2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fee27a949b92ca6514db09c907ffa399 = $(`<div id="html_fee27a949b92ca6514db09c907ffa399" style="width: 100.0%; height: 100.0%;">Candidato: Base CANDELEDA</div>`)[0];
+                popup_507d507b208b6d6aaf27349c51cabdc2.setContent(html_fee27a949b92ca6514db09c907ffa399);
+            
+        
+
+        marker_ff3d320f0164408e5668cc3afa8343a3.bindPopup(popup_507d507b208b6d6aaf27349c51cabdc2)
+        ;
+
+        
+    
+    
+                marker_ff3d320f0164408e5668cc3afa8343a3.setIcon(icon_697a8108a17421d05d567ec624c2104d);
+            
+    
+            var marker_3b56be01934bce7152f4dce7b9438b78 = L.marker(
+                [40.292542, -4.580612],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_98c62480f93d870802de5170199c4ce2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ee7db530ca050f998179f71051fcae41 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0d005516c1a2e58b876e3bb897c2d1b4 = $(`<div id="html_0d005516c1a2e58b876e3bb897c2d1b4" style="width: 100.0%; height: 100.0%;">Candidato: Base SOTILLO DE LA ADRADA</div>`)[0];
+                popup_ee7db530ca050f998179f71051fcae41.setContent(html_0d005516c1a2e58b876e3bb897c2d1b4);
+            
+        
+
+        marker_3b56be01934bce7152f4dce7b9438b78.bindPopup(popup_ee7db530ca050f998179f71051fcae41)
+        ;
+
+        
+    
+    
+                marker_3b56be01934bce7152f4dce7b9438b78.setIcon(icon_98c62480f93d870802de5170199c4ce2);
+            
+    
+            var marker_c8ed5e1c29b6b6422ffec420e5bdeec1 = L.marker(
+                [40.415683, -4.500749],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_7cfd7da0420c70ebd6fcdc58e2078813 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_833f2f850b62ed556ee4664bb2e51c4b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_04c4c5df707ccefc1319291d76d5643d = $(`<div id="html_04c4c5df707ccefc1319291d76d5643d" style="width: 100.0%; height: 100.0%;">Candidato: Base EL TIEMBLO</div>`)[0];
+                popup_833f2f850b62ed556ee4664bb2e51c4b.setContent(html_04c4c5df707ccefc1319291d76d5643d);
+            
+        
+
+        marker_c8ed5e1c29b6b6422ffec420e5bdeec1.bindPopup(popup_833f2f850b62ed556ee4664bb2e51c4b)
+        ;
+
+        
+    
+    
+                marker_c8ed5e1c29b6b6422ffec420e5bdeec1.setIcon(icon_7cfd7da0420c70ebd6fcdc58e2078813);
+            
+    
+            var marker_a1e90b679fe53945171157d90684641b = L.marker(
+                [40.454779, -4.464399],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_e26b4afee2de1b2b4b12bd646421111c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_31fe6b94c237c9578e36348a1d81fc8e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a971f29d475c3c4138f937eb4f9aa5d3 = $(`<div id="html_a971f29d475c3c4138f937eb4f9aa5d3" style="width: 100.0%; height: 100.0%;">Candidato: Base CEBREROS</div>`)[0];
+                popup_31fe6b94c237c9578e36348a1d81fc8e.setContent(html_a971f29d475c3c4138f937eb4f9aa5d3);
+            
+        
+
+        marker_a1e90b679fe53945171157d90684641b.bindPopup(popup_31fe6b94c237c9578e36348a1d81fc8e)
+        ;
+
+        
+    
+    
+                marker_a1e90b679fe53945171157d90684641b.setIcon(icon_e26b4afee2de1b2b4b12bd646421111c);
+            
+    
+            var marker_64e7d8adff96c05fde1f9e41acd6eb1b = L.marker(
+                [42.34113, -3.704198],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_7656f57b2d46f0634944eb24e66b39a4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_639410d64a0ab80e44c9d73cf5680837 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_54c8bd08452acaebcadf6ba838a0318d = $(`<div id="html_54c8bd08452acaebcadf6ba838a0318d" style="width: 100.0%; height: 100.0%;">Candidato: Base BURGOS</div>`)[0];
+                popup_639410d64a0ab80e44c9d73cf5680837.setContent(html_54c8bd08452acaebcadf6ba838a0318d);
+            
+        
+
+        marker_64e7d8adff96c05fde1f9e41acd6eb1b.bindPopup(popup_639410d64a0ab80e44c9d73cf5680837)
+        ;
+
+        
+    
+    
+                marker_64e7d8adff96c05fde1f9e41acd6eb1b.setIcon(icon_7656f57b2d46f0634944eb24e66b39a4);
+            
+    
+            var marker_ba4675dab02e62bc3c2322983cb4a28a = L.marker(
+                [42.680521, -2.952396],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_d887697fc2398815b73ad0576045b2be = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1922d5de4d311a3b4a1a9c39497559bd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0c71b3b374ae86527b528efc6bc7fe9c = $(`<div id="html_0c71b3b374ae86527b528efc6bc7fe9c" style="width: 100.0%; height: 100.0%;">Candidato: Base MIRANDA DE EBRO</div>`)[0];
+                popup_1922d5de4d311a3b4a1a9c39497559bd.setContent(html_0c71b3b374ae86527b528efc6bc7fe9c);
+            
+        
+
+        marker_ba4675dab02e62bc3c2322983cb4a28a.bindPopup(popup_1922d5de4d311a3b4a1a9c39497559bd)
+        ;
+
+        
+    
+    
+                marker_ba4675dab02e62bc3c2322983cb4a28a.setIcon(icon_d887697fc2398815b73ad0576045b2be);
+            
+    
+            var marker_6e5001cea75fa0dd6aa5d20f05acc801 = L.marker(
+                [41.67155, -3.689244],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_9979dcce7973a8cddad4bd6b7e4d5671 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_79926d0a84c333497e41f00df51146de = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0fa973925ccd355036a5773e3521d581 = $(`<div id="html_0fa973925ccd355036a5773e3521d581" style="width: 100.0%; height: 100.0%;">Candidato: Base ARANDA DE DUERO</div>`)[0];
+                popup_79926d0a84c333497e41f00df51146de.setContent(html_0fa973925ccd355036a5773e3521d581);
+            
+        
+
+        marker_6e5001cea75fa0dd6aa5d20f05acc801.bindPopup(popup_79926d0a84c333497e41f00df51146de)
+        ;
+
+        
+    
+    
+                marker_6e5001cea75fa0dd6aa5d20f05acc801.setIcon(icon_9979dcce7973a8cddad4bd6b7e4d5671);
+            
+    
+            var marker_c1c5f75d3b6ef833fe915e780fc6e5f0 = L.marker(
+                [42.54898, -3.323904],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_e1321408142feb0a8a8075f588771397 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9767adfe49fbbea01a889ddd98e04232 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1dad85db774afaaedf61b089a2578c95 = $(`<div id="html_1dad85db774afaaedf61b089a2578c95" style="width: 100.0%; height: 100.0%;">Candidato: Base BRIVIESCA</div>`)[0];
+                popup_9767adfe49fbbea01a889ddd98e04232.setContent(html_1dad85db774afaaedf61b089a2578c95);
+            
+        
+
+        marker_c1c5f75d3b6ef833fe915e780fc6e5f0.bindPopup(popup_9767adfe49fbbea01a889ddd98e04232)
+        ;
+
+        
+    
+    
+                marker_c1c5f75d3b6ef833fe915e780fc6e5f0.setIcon(icon_e1321408142feb0a8a8075f588771397);
+            
+    
+            var marker_8cf02448e58778701376423aea13c3e4 = L.marker(
+                [42.928523, -3.487503],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_39098e4ab09bd2574e582eb060ff22eb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_749c63ba73237c046d78117574d2924d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_43958e39049e8e5c010bdd1376183122 = $(`<div id="html_43958e39049e8e5c010bdd1376183122" style="width: 100.0%; height: 100.0%;">Candidato: Base MEDINA DE POMAR</div>`)[0];
+                popup_749c63ba73237c046d78117574d2924d.setContent(html_43958e39049e8e5c010bdd1376183122);
+            
+        
+
+        marker_8cf02448e58778701376423aea13c3e4.bindPopup(popup_749c63ba73237c046d78117574d2924d)
+        ;
+
+        
+    
+    
+                marker_8cf02448e58778701376423aea13c3e4.setIcon(icon_39098e4ab09bd2574e582eb060ff22eb);
+            
+    
+            var marker_71bb7f3570e6dc7df5fb6b9a0207a510 = L.marker(
+                [43.099086, -3.280765],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_730eb621d9e27d7fdb8e8add057de2ad = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7a49628c371f74b1c726232f40b52f0b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a8ecad65e0ad2cebe2a41cb0bf44fdab = $(`<div id="html_a8ecad65e0ad2cebe2a41cb0bf44fdab" style="width: 100.0%; height: 100.0%;">Candidato: Base VALLE DE MENA</div>`)[0];
+                popup_7a49628c371f74b1c726232f40b52f0b.setContent(html_a8ecad65e0ad2cebe2a41cb0bf44fdab);
+            
+        
+
+        marker_71bb7f3570e6dc7df5fb6b9a0207a510.bindPopup(popup_7a49628c371f74b1c726232f40b52f0b)
+        ;
+
+        
+    
+    
+                marker_71bb7f3570e6dc7df5fb6b9a0207a510.setIcon(icon_730eb621d9e27d7fdb8e8add057de2ad);
+            
+    
+            var marker_b623e841fd607df9c8049304e5635f58 = L.marker(
+                [42.938486, -3.57246],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_f0d6dc389c9045ae51ad48d221c562b0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2a64fac0b3edd87e18afade1f72b7827 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bd43dba78f08924d15b6a157ecc5e2df = $(`<div id="html_bd43dba78f08924d15b6a157ecc5e2df" style="width: 100.0%; height: 100.0%;">Candidato: Base VILLARCAYO DE MERINDAD DE CASTILLA LA VIEJA</div>`)[0];
+                popup_2a64fac0b3edd87e18afade1f72b7827.setContent(html_bd43dba78f08924d15b6a157ecc5e2df);
+            
+        
+
+        marker_b623e841fd607df9c8049304e5635f58.bindPopup(popup_2a64fac0b3edd87e18afade1f72b7827)
+        ;
+
+        
+    
+    
+                marker_b623e841fd607df9c8049304e5635f58.setIcon(icon_f0d6dc389c9045ae51ad48d221c562b0);
+            
+    
+            var marker_1c277a2249ead51344255fa54072a185 = L.marker(
+                [42.02736, -3.759314],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_9424618be43f684f0f46b0fa114de463 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cb320ac5a040717664d7e89485dea7a9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_96354527002530d3cff1e6df952eb552 = $(`<div id="html_96354527002530d3cff1e6df952eb552" style="width: 100.0%; height: 100.0%;">Candidato: Base LERMA</div>`)[0];
+                popup_cb320ac5a040717664d7e89485dea7a9.setContent(html_96354527002530d3cff1e6df952eb552);
+            
+        
+
+        marker_1c277a2249ead51344255fa54072a185.bindPopup(popup_cb320ac5a040717664d7e89485dea7a9)
+        ;
+
+        
+    
+    
+                marker_1c277a2249ead51344255fa54072a185.setIcon(icon_9424618be43f684f0f46b0fa114de463);
+            
+    
+            var marker_8022b3f594d181bae4b319b1ef24d83d = L.marker(
+                [42.599121, -5.567076],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_48d007fcbdddc7be9e367e34632a3515 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2bc9b08ee2a6eec3b13024d18e1b0f5c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4029b92fd52378d2515abddcc7a3e5ad = $(`<div id="html_4029b92fd52378d2515abddcc7a3e5ad" style="width: 100.0%; height: 100.0%;">Candidato: Base LEÓN</div>`)[0];
+                popup_2bc9b08ee2a6eec3b13024d18e1b0f5c.setContent(html_4029b92fd52378d2515abddcc7a3e5ad);
+            
+        
+
+        marker_8022b3f594d181bae4b319b1ef24d83d.bindPopup(popup_2bc9b08ee2a6eec3b13024d18e1b0f5c)
+        ;
+
+        
+    
+    
+                marker_8022b3f594d181bae4b319b1ef24d83d.setIcon(icon_48d007fcbdddc7be9e367e34632a3515);
+            
+    
+            var marker_b4747818fb041d6fa740209a4a95cc8b = L.marker(
+                [42.611173, -5.615482],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_9ec61593c9bc5df8d0f31ce8979366a4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_652bfafccb6333b8e6fa2a47679e191d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a61c5e3d0e9b3cbab6e81a1cc83ae70c = $(`<div id="html_a61c5e3d0e9b3cbab6e81a1cc83ae70c" style="width: 100.0%; height: 100.0%;">Candidato: Base SAN ANDRÉS DEL RABANEDO</div>`)[0];
+                popup_652bfafccb6333b8e6fa2a47679e191d.setContent(html_a61c5e3d0e9b3cbab6e81a1cc83ae70c);
+            
+        
+
+        marker_b4747818fb041d6fa740209a4a95cc8b.bindPopup(popup_652bfafccb6333b8e6fa2a47679e191d)
+        ;
+
+        
+    
+    
+                marker_b4747818fb041d6fa740209a4a95cc8b.setIcon(icon_9ec61593c9bc5df8d0f31ce8979366a4);
+            
+    
+            var marker_111dcbb75a2104dd42a164ae9e970c89 = L.marker(
+                [42.646313, -5.55877],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_628799eef899e51b79f457322dfa1c48 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_32b211c736868d5ca1fc4371fae16203 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b0cfd70e0607de001f4df66855775577 = $(`<div id="html_b0cfd70e0607de001f4df66855775577" style="width: 100.0%; height: 100.0%;">Candidato: Base VILLAQUILAMBRE</div>`)[0];
+                popup_32b211c736868d5ca1fc4371fae16203.setContent(html_b0cfd70e0607de001f4df66855775577);
+            
+        
+
+        marker_111dcbb75a2104dd42a164ae9e970c89.bindPopup(popup_32b211c736868d5ca1fc4371fae16203)
+        ;
+
+        
+    
+    
+                marker_111dcbb75a2104dd42a164ae9e970c89.setIcon(icon_628799eef899e51b79f457322dfa1c48);
+            
+    
+            var marker_8212e40d01c123a88965c5782c606493 = L.marker(
+                [42.457631, -6.057144],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_10d78fd17f0b33470c81f0fe6bac475a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d9f9385f46f69e9a0927a57a2236183d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d87e1a52ddf6aca13131c1f5fc8d4b7b = $(`<div id="html_d87e1a52ddf6aca13131c1f5fc8d4b7b" style="width: 100.0%; height: 100.0%;">Candidato: Base ASTORGA</div>`)[0];
+                popup_d9f9385f46f69e9a0927a57a2236183d.setContent(html_d87e1a52ddf6aca13131c1f5fc8d4b7b);
+            
+        
+
+        marker_8212e40d01c123a88965c5782c606493.bindPopup(popup_d9f9385f46f69e9a0927a57a2236183d)
+        ;
+
+        
+    
+    
+                marker_8212e40d01c123a88965c5782c606493.setIcon(icon_10d78fd17f0b33470c81f0fe6bac475a);
+            
+    
+            var marker_4b3a6c5f0e54c0b88048f7023ac72e6e = L.marker(
+                [42.29655, -5.899119],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_f534b1eaffadbd1c58acc9c0c132b2b4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2379994b2e8612ffca433c2d465fe210 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f7d4d0dde025139a40d12ee78f7e6fee = $(`<div id="html_f7d4d0dde025139a40d12ee78f7e6fee" style="width: 100.0%; height: 100.0%;">Candidato: Base LA BAÑEZA</div>`)[0];
+                popup_2379994b2e8612ffca433c2d465fe210.setContent(html_f7d4d0dde025139a40d12ee78f7e6fee);
+            
+        
+
+        marker_4b3a6c5f0e54c0b88048f7023ac72e6e.bindPopup(popup_2379994b2e8612ffca433c2d465fe210)
+        ;
+
+        
+    
+    
+                marker_4b3a6c5f0e54c0b88048f7023ac72e6e.setIcon(icon_f534b1eaffadbd1c58acc9c0c132b2b4);
+            
+    
+            var marker_384bf34accf837ca0bce49e1a6f01c20 = L.marker(
+                [42.56918, -5.682925],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_147610feb061df1c0e93a4b63c0b39f4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2027d4574f718394379a15f1d99e3a78 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_00d5bff4fa1a4751179604cc2a25a1f3 = $(`<div id="html_00d5bff4fa1a4751179604cc2a25a1f3" style="width: 100.0%; height: 100.0%;">Candidato: Base VALVERDE DE LA VIRGEN</div>`)[0];
+                popup_2027d4574f718394379a15f1d99e3a78.setContent(html_00d5bff4fa1a4751179604cc2a25a1f3);
+            
+        
+
+        marker_384bf34accf837ca0bce49e1a6f01c20.bindPopup(popup_2027d4574f718394379a15f1d99e3a78)
+        ;
+
+        
+    
+    
+                marker_384bf34accf837ca0bce49e1a6f01c20.setIcon(icon_147610feb061df1c0e93a4b63c0b39f4);
+            
+    
+            var marker_3d58a4ab49abefce7efdc01a95ee0ee1 = L.marker(
+                [42.939834, -6.317],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_bba3edc14ea18cc7748b1512f0e59763 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_51256f14b16b47570672877fa4ecde5a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3e564a44e95e10232543ececf8440c86 = $(`<div id="html_3e564a44e95e10232543ececf8440c86" style="width: 100.0%; height: 100.0%;">Candidato: Base VILLABLINO</div>`)[0];
+                popup_51256f14b16b47570672877fa4ecde5a.setContent(html_3e564a44e95e10232543ececf8440c86);
+            
+        
+
+        marker_3d58a4ab49abefce7efdc01a95ee0ee1.bindPopup(popup_51256f14b16b47570672877fa4ecde5a)
+        ;
+
+        
+    
+    
+                marker_3d58a4ab49abefce7efdc01a95ee0ee1.setIcon(icon_bba3edc14ea18cc7748b1512f0e59763);
+            
+    
+            var marker_a1efa5ecd5ca852319300dfbf01b5310 = L.marker(
+                [42.647374, -5.631149],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_985fb9ac7625e6770f23703d6e17861a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d88f67c4dd6ddc6dd494abfdb4181e5c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5f107649cab602e08f58f268b3945918 = $(`<div id="html_5f107649cab602e08f58f268b3945918" style="width: 100.0%; height: 100.0%;">Candidato: Base SARIEGOS</div>`)[0];
+                popup_d88f67c4dd6ddc6dd494abfdb4181e5c.setContent(html_5f107649cab602e08f58f268b3945918);
+            
+        
+
+        marker_a1efa5ecd5ca852319300dfbf01b5310.bindPopup(popup_d88f67c4dd6ddc6dd494abfdb4181e5c)
+        ;
+
+        
+    
+    
+                marker_a1efa5ecd5ca852319300dfbf01b5310.setIcon(icon_985fb9ac7625e6770f23703d6e17861a);
+            
+    
+            var marker_f9017f55b934ba3193c0530b5727f216 = L.marker(
+                [42.007837, -4.534601],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_64ab9a5d2cd6f6994fd2dd6457026f66 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b6d0296b7e4e9af06063cc04a63b18fd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b50d026e9b627dfb5a68ca6d2b5ad621 = $(`<div id="html_b50d026e9b627dfb5a68ca6d2b5ad621" style="width: 100.0%; height: 100.0%;">Candidato: Base PALENCIA</div>`)[0];
+                popup_b6d0296b7e4e9af06063cc04a63b18fd.setContent(html_b50d026e9b627dfb5a68ca6d2b5ad621);
+            
+        
+
+        marker_f9017f55b934ba3193c0530b5727f216.bindPopup(popup_b6d0296b7e4e9af06063cc04a63b18fd)
+        ;
+
+        
+    
+    
+                marker_f9017f55b934ba3193c0530b5727f216.setIcon(icon_64ab9a5d2cd6f6994fd2dd6457026f66);
+            
+    
+            var marker_01328254495d610b7508e71b81aed6c5 = L.marker(
+                [42.792646, -4.259938],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_37357741fb29d0c06a0a42279b14d963 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5cab38f798fa40e1bb7b0bc87f7567c8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_592409bffce19002abb3b7d7bcd9d5e3 = $(`<div id="html_592409bffce19002abb3b7d7bcd9d5e3" style="width: 100.0%; height: 100.0%;">Candidato: Base AGUILAR DE CAMPOO</div>`)[0];
+                popup_5cab38f798fa40e1bb7b0bc87f7567c8.setContent(html_592409bffce19002abb3b7d7bcd9d5e3);
+            
+        
+
+        marker_01328254495d610b7508e71b81aed6c5.bindPopup(popup_5cab38f798fa40e1bb7b0bc87f7567c8)
+        ;
+
+        
+    
+    
+                marker_01328254495d610b7508e71b81aed6c5.setIcon(icon_37357741fb29d0c06a0a42279b14d963);
+            
+    
+            var marker_dd1d3b510ea0d1a979b27bee0448c301 = L.marker(
+                [41.947956, -4.515428],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_0d9284218d7886141a1dd2fd3328456e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3168d89a9df15ab15de810e1892e0662 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_59fa4508c68eab44e6c40967b31c6035 = $(`<div id="html_59fa4508c68eab44e6c40967b31c6035" style="width: 100.0%; height: 100.0%;">Candidato: Base VILLAMURIEL DE CERRATO</div>`)[0];
+                popup_3168d89a9df15ab15de810e1892e0662.setContent(html_59fa4508c68eab44e6c40967b31c6035);
+            
+        
+
+        marker_dd1d3b510ea0d1a979b27bee0448c301.bindPopup(popup_3168d89a9df15ab15de810e1892e0662)
+        ;
+
+        
+    
+    
+                marker_dd1d3b510ea0d1a979b27bee0448c301.setIcon(icon_0d9284218d7886141a1dd2fd3328456e);
+            
+    
+            var marker_cba4ca0a1f663593931da2f3ef8cf275 = L.marker(
+                [41.92284, -4.497346],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_4ff0c69e7c68c8da090f79893fb72277 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1787548811c7e736a429ed240477dd10 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1e9c33f4332bc21b53b3d5b4b27593c0 = $(`<div id="html_1e9c33f4332bc21b53b3d5b4b27593c0" style="width: 100.0%; height: 100.0%;">Candidato: Base VENTA DE BAÑOS</div>`)[0];
+                popup_1787548811c7e736a429ed240477dd10.setContent(html_1e9c33f4332bc21b53b3d5b4b27593c0);
+            
+        
+
+        marker_cba4ca0a1f663593931da2f3ef8cf275.bindPopup(popup_1787548811c7e736a429ed240477dd10)
+        ;
+
+        
+    
+    
+                marker_cba4ca0a1f663593931da2f3ef8cf275.setIcon(icon_4ff0c69e7c68c8da090f79893fb72277);
+            
+    
+            var marker_368860988ae295a4281e09935d142507 = L.marker(
+                [42.788941, -4.84151],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_46b667325638e24f1112c67d3b55316f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_499caec979f507ca916eae4c57c0ea3f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_780cb7d46530394daeff365bc682c6aa = $(`<div id="html_780cb7d46530394daeff365bc682c6aa" style="width: 100.0%; height: 100.0%;">Candidato: Base GUARDO</div>`)[0];
+                popup_499caec979f507ca916eae4c57c0ea3f.setContent(html_780cb7d46530394daeff365bc682c6aa);
+            
+        
+
+        marker_368860988ae295a4281e09935d142507.bindPopup(popup_499caec979f507ca916eae4c57c0ea3f)
+        ;
+
+        
+    
+    
+                marker_368860988ae295a4281e09935d142507.setIcon(icon_46b667325638e24f1112c67d3b55316f);
+            
+    
+            var marker_d9be831d4870aa0497c55d187dd79749 = L.marker(
+                [42.522062, -4.735138],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_10d3b58b3ab2275b79ffa00b5cd54f1d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d538579a50f0ab6fd0531b2ddafd1968 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5a4cacc0c9146614d62880a26694c9f4 = $(`<div id="html_5a4cacc0c9146614d62880a26694c9f4" style="width: 100.0%; height: 100.0%;">Candidato: Base SALDAÑA</div>`)[0];
+                popup_d538579a50f0ab6fd0531b2ddafd1968.setContent(html_5a4cacc0c9146614d62880a26694c9f4);
+            
+        
+
+        marker_d9be831d4870aa0497c55d187dd79749.bindPopup(popup_d538579a50f0ab6fd0531b2ddafd1968)
+        ;
+
+        
+    
+    
+                marker_d9be831d4870aa0497c55d187dd79749.setIcon(icon_10d3b58b3ab2275b79ffa00b5cd54f1d);
+            
+    
+            var marker_0361cd9d838b57b28dfceec607700a41 = L.marker(
+                [42.053985, -4.581755],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_132916c134645ce41d6d24535715dcd7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_850cb6c7cc008426b1082a15dc799b43 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eb6066c2b81e6f5d94a79513abad3c8d = $(`<div id="html_eb6066c2b81e6f5d94a79513abad3c8d" style="width: 100.0%; height: 100.0%;">Candidato: Base GRIJOTA</div>`)[0];
+                popup_850cb6c7cc008426b1082a15dc799b43.setContent(html_eb6066c2b81e6f5d94a79513abad3c8d);
+            
+        
+
+        marker_0361cd9d838b57b28dfceec607700a41.bindPopup(popup_850cb6c7cc008426b1082a15dc799b43)
+        ;
+
+        
+    
+    
+                marker_0361cd9d838b57b28dfceec607700a41.setIcon(icon_132916c134645ce41d6d24535715dcd7);
+            
+    
+            var marker_4a7f747906447d466d651c78a32efdbb = L.marker(
+                [41.877928, -4.545298],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_4f3c82a74be3fc1db64b695f2d3e8283 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6f2c7dd75403054dd3a04d7a6e0323eb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2936972e2348d18942435d082b5bb4b4 = $(`<div id="html_2936972e2348d18942435d082b5bb4b4" style="width: 100.0%; height: 100.0%;">Candidato: Base DUEÑAS</div>`)[0];
+                popup_6f2c7dd75403054dd3a04d7a6e0323eb.setContent(html_2936972e2348d18942435d082b5bb4b4);
+            
+        
+
+        marker_4a7f747906447d466d651c78a32efdbb.bindPopup(popup_6f2c7dd75403054dd3a04d7a6e0323eb)
+        ;
+
+        
+    
+    
+                marker_4a7f747906447d466d651c78a32efdbb.setIcon(icon_4f3c82a74be3fc1db64b695f2d3e8283);
+            
+    
+            var marker_85f2ce59d681e88ab4f6b8af529baa02 = L.marker(
+                [40.967368, -5.665381],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_6454f7784bd645eca950f4413e402333 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d2c3dbc8bd8a3d60ae515355ddb6c821 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_55517422fdc5df6030daa6178f304fb4 = $(`<div id="html_55517422fdc5df6030daa6178f304fb4" style="width: 100.0%; height: 100.0%;">Candidato: Base SALAMANCA</div>`)[0];
+                popup_d2c3dbc8bd8a3d60ae515355ddb6c821.setContent(html_55517422fdc5df6030daa6178f304fb4);
+            
+        
+
+        marker_85f2ce59d681e88ab4f6b8af529baa02.bindPopup(popup_d2c3dbc8bd8a3d60ae515355ddb6c821)
+        ;
+
+        
+    
+    
+                marker_85f2ce59d681e88ab4f6b8af529baa02.setIcon(icon_6454f7784bd645eca950f4413e402333);
+            
+    
+            var marker_9052a8c9d5461b24af1c27e2fc4f1893 = L.marker(
+                [40.949683, -5.631074],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_2e33683a0fb0da060d381809ef9f88d5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_60f4493de2663b4ec4ac3f8da9ab07b4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_746a1fd14582944bc71f0bb3228b6b5a = $(`<div id="html_746a1fd14582944bc71f0bb3228b6b5a" style="width: 100.0%; height: 100.0%;">Candidato: Base SANTA MARTA DE TORMES</div>`)[0];
+                popup_60f4493de2663b4ec4ac3f8da9ab07b4.setContent(html_746a1fd14582944bc71f0bb3228b6b5a);
+            
+        
+
+        marker_9052a8c9d5461b24af1c27e2fc4f1893.bindPopup(popup_60f4493de2663b4ec4ac3f8da9ab07b4)
+        ;
+
+        
+    
+    
+                marker_9052a8c9d5461b24af1c27e2fc4f1893.setIcon(icon_2e33683a0fb0da060d381809ef9f88d5);
+            
+    
+            var marker_26ae1555edf168c30f5f9f2ad4812d89 = L.marker(
+                [40.387034, -5.767484],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_627e267c57f0caaa3c57ecf09c2a7815 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_88b99b883e2d24216715c7e77efa22d2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eb5411b2f556bcc2367d02a7eca113b3 = $(`<div id="html_eb5411b2f556bcc2367d02a7eca113b3" style="width: 100.0%; height: 100.0%;">Candidato: Base BÉJAR</div>`)[0];
+                popup_88b99b883e2d24216715c7e77efa22d2.setContent(html_eb5411b2f556bcc2367d02a7eca113b3);
+            
+        
+
+        marker_26ae1555edf168c30f5f9f2ad4812d89.bindPopup(popup_88b99b883e2d24216715c7e77efa22d2)
+        ;
+
+        
+    
+    
+                marker_26ae1555edf168c30f5f9f2ad4812d89.setIcon(icon_627e267c57f0caaa3c57ecf09c2a7815);
+            
+    
+            var marker_0a88cb23ed4b0b8ddc600ebf15765dd0 = L.marker(
+                [40.597312, -6.534158],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_9069c0673f49a954204f597944b264ca = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_18a99a7bc545ff7f1e6a201456675cee = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c51404654e69ae15b9b8580e099b549a = $(`<div id="html_c51404654e69ae15b9b8580e099b549a" style="width: 100.0%; height: 100.0%;">Candidato: Base CIUDAD RODRIGO</div>`)[0];
+                popup_18a99a7bc545ff7f1e6a201456675cee.setContent(html_c51404654e69ae15b9b8580e099b549a);
+            
+        
+
+        marker_0a88cb23ed4b0b8ddc600ebf15765dd0.bindPopup(popup_18a99a7bc545ff7f1e6a201456675cee)
+        ;
+
+        
+    
+    
+                marker_0a88cb23ed4b0b8ddc600ebf15765dd0.setIcon(icon_9069c0673f49a954204f597944b264ca);
+            
+    
+            var marker_70ab7ff6458f0b7899169dd098e28055 = L.marker(
+                [40.999644, -5.696926],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_155b9c326da1ffdbaaa8bfdea6b93c01 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dbeb7715f7d80fcc05675cb0c3d8626c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f7eba27f93c3b6d3c7828665b4c28648 = $(`<div id="html_f7eba27f93c3b6d3c7828665b4c28648" style="width: 100.0%; height: 100.0%;">Candidato: Base VILLAMAYOR</div>`)[0];
+                popup_dbeb7715f7d80fcc05675cb0c3d8626c.setContent(html_f7eba27f93c3b6d3c7828665b4c28648);
+            
+        
+
+        marker_70ab7ff6458f0b7899169dd098e28055.bindPopup(popup_dbeb7715f7d80fcc05675cb0c3d8626c)
+        ;
+
+        
+    
+    
+                marker_70ab7ff6458f0b7899169dd098e28055.setIcon(icon_155b9c326da1ffdbaaa8bfdea6b93c01);
+            
+    
+            var marker_42a55c160d5d2a64bb11c7395528970a = L.marker(
+                [40.932947, -5.651181],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_496617628c09a70dac4e947f66012cef = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_42a7fb59150525b4cb0a7215511a263a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7d048536245636bfc1efdcc7966e6593 = $(`<div id="html_7d048536245636bfc1efdcc7966e6593" style="width: 100.0%; height: 100.0%;">Candidato: Base CARBAJOSA DE LA SAGRADA</div>`)[0];
+                popup_42a7fb59150525b4cb0a7215511a263a.setContent(html_7d048536245636bfc1efdcc7966e6593);
+            
+        
+
+        marker_42a55c160d5d2a64bb11c7395528970a.bindPopup(popup_42a7fb59150525b4cb0a7215511a263a)
+        ;
+
+        
+    
+    
+                marker_42a55c160d5d2a64bb11c7395528970a.setIcon(icon_496617628c09a70dac4e947f66012cef);
+            
+    
+            var marker_26c67cef15715b80acfc008e9ba79155 = L.marker(
+                [41.009096, -5.649061],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_95afa57651d356af184d48b4b7054662 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1492de7c029ac4c8bbf2f58c04130447 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d73d64d4a14ff9aa02e6a666c8947e37 = $(`<div id="html_d73d64d4a14ff9aa02e6a666c8947e37" style="width: 100.0%; height: 100.0%;">Candidato: Base VILLARES DE LA REINA</div>`)[0];
+                popup_1492de7c029ac4c8bbf2f58c04130447.setContent(html_d73d64d4a14ff9aa02e6a666c8947e37);
+            
+        
+
+        marker_26c67cef15715b80acfc008e9ba79155.bindPopup(popup_1492de7c029ac4c8bbf2f58c04130447)
+        ;
+
+        
+    
+    
+                marker_26c67cef15715b80acfc008e9ba79155.setIcon(icon_95afa57651d356af184d48b4b7054662);
+            
+    
+            var marker_0161c4b6a3af139dc41877537d7d8396 = L.marker(
+                [40.901737, -5.200546],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_3558bfe0932a6ceec6f9d3e90d1774ae = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4260c6db9ffeb6f4bdc9cc1b694c4bf1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0730d390c80f0e253ffe580b7755d0ce = $(`<div id="html_0730d390c80f0e253ffe580b7755d0ce" style="width: 100.0%; height: 100.0%;">Candidato: Base PEÑARANDA DE BRACAMONTE</div>`)[0];
+                popup_4260c6db9ffeb6f4bdc9cc1b694c4bf1.setContent(html_0730d390c80f0e253ffe580b7755d0ce);
+            
+        
+
+        marker_0161c4b6a3af139dc41877537d7d8396.bindPopup(popup_4260c6db9ffeb6f4bdc9cc1b694c4bf1)
+        ;
+
+        
+    
+    
+                marker_0161c4b6a3af139dc41877537d7d8396.setIcon(icon_3558bfe0932a6ceec6f9d3e90d1774ae);
+            
+    
+            var marker_4d221f3f8d018619df91f43ff50f75b4 = L.marker(
+                [40.94987, -4.125241],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_f2e4735315f3379bcbccf001597c1a56 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_852789904919015efaf94acb3243c463 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e7ff6fe628a9a9ce9699cfd2707c2031 = $(`<div id="html_e7ff6fe628a9a9ce9699cfd2707c2031" style="width: 100.0%; height: 100.0%;">Candidato: Base SEGOVIA</div>`)[0];
+                popup_852789904919015efaf94acb3243c463.setContent(html_e7ff6fe628a9a9ce9699cfd2707c2031);
+            
+        
+
+        marker_4d221f3f8d018619df91f43ff50f75b4.bindPopup(popup_852789904919015efaf94acb3243c463)
+        ;
+
+        
+    
+    
+                marker_4d221f3f8d018619df91f43ff50f75b4.setIcon(icon_f2e4735315f3379bcbccf001597c1a56);
+            
+    
+            var marker_fe5308f106773455f109e92833a0719f = L.marker(
+                [40.718093, -4.24753],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_360ff07787289f1a7e836cc3a6ec00b2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_da65d42d7170b7f0f9f50e5f232d9107 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_42e0496dc69192b6b4cce1ddc519e22a = $(`<div id="html_42e0496dc69192b6b4cce1ddc519e22a" style="width: 100.0%; height: 100.0%;">Candidato: Base EL ESPINAR</div>`)[0];
+                popup_da65d42d7170b7f0f9f50e5f232d9107.setContent(html_42e0496dc69192b6b4cce1ddc519e22a);
+            
+        
+
+        marker_fe5308f106773455f109e92833a0719f.bindPopup(popup_da65d42d7170b7f0f9f50e5f232d9107)
+        ;
+
+        
+    
+    
+                marker_fe5308f106773455f109e92833a0719f.setIcon(icon_360ff07787289f1a7e836cc3a6ec00b2);
+            
+    
+            var marker_9a9ce94baac12ef82df1e93a7265c3c2 = L.marker(
+                [41.403698, -4.317391],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_b92c1101600b8883bc906dd7448b5be2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_77268ded105af9d9f076154437885829 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1fdbff8214ddf65feb1626f816e086b6 = $(`<div id="html_1fdbff8214ddf65feb1626f816e086b6" style="width: 100.0%; height: 100.0%;">Candidato: Base CUÉLLAR</div>`)[0];
+                popup_77268ded105af9d9f076154437885829.setContent(html_1fdbff8214ddf65feb1626f816e086b6);
+            
+        
+
+        marker_9a9ce94baac12ef82df1e93a7265c3c2.bindPopup(popup_77268ded105af9d9f076154437885829)
+        ;
+
+        
+    
+    
+                marker_9a9ce94baac12ef82df1e93a7265c3c2.setIcon(icon_b92c1101600b8883bc906dd7448b5be2);
+            
+    
+            var marker_9ee7013e4958017c507ddda06f9a75ae = L.marker(
+                [40.930552, -4.061178],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_bc2338e20987fe29036c73fc76cd317e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8e751b2f39106ccdf91ddcedab064f88 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d06f6708f8577fbdb45df2f7843e04d3 = $(`<div id="html_d06f6708f8577fbdb45df2f7843e04d3" style="width: 100.0%; height: 100.0%;">Candidato: Base PALAZUELOS DE ERESMA</div>`)[0];
+                popup_8e751b2f39106ccdf91ddcedab064f88.setContent(html_d06f6708f8577fbdb45df2f7843e04d3);
+            
+        
+
+        marker_9ee7013e4958017c507ddda06f9a75ae.bindPopup(popup_8e751b2f39106ccdf91ddcedab064f88)
+        ;
+
+        
+    
+    
+                marker_9ee7013e4958017c507ddda06f9a75ae.setIcon(icon_bc2338e20987fe29036c73fc76cd317e);
+            
+    
+            var marker_1bb7ee3ac565f23d447020be974163e2 = L.marker(
+                [40.897628, -4.004759],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_27a15f6e7270c34db0a1fef9993a81ef = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0255b099909c37ec4ce3e3296ed69dc9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2b65f088ce4986925b951fbc1c082874 = $(`<div id="html_2b65f088ce4986925b951fbc1c082874" style="width: 100.0%; height: 100.0%;">Candidato: Base REAL SITIO DE SAN ILDEFONSO</div>`)[0];
+                popup_0255b099909c37ec4ce3e3296ed69dc9.setContent(html_2b65f088ce4986925b951fbc1c082874);
+            
+        
+
+        marker_1bb7ee3ac565f23d447020be974163e2.bindPopup(popup_0255b099909c37ec4ce3e3296ed69dc9)
+        ;
+
+        
+    
+    
+                marker_1bb7ee3ac565f23d447020be974163e2.setIcon(icon_27a15f6e7270c34db0a1fef9993a81ef);
+            
+    
+            var marker_8597903ede967abf94e6c3b00b6b8e78 = L.marker(
+                [40.968941, -4.103757],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_64bba35d9f3624377df2a05acd9ac7c5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_703ba06ea6c0fa6ac69d51a05dedf0cd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fe91e8ac697b4d2ee0aff570ccb63834 = $(`<div id="html_fe91e8ac697b4d2ee0aff570ccb63834" style="width: 100.0%; height: 100.0%;">Candidato: Base LA LASTRILLA</div>`)[0];
+                popup_703ba06ea6c0fa6ac69d51a05dedf0cd.setContent(html_fe91e8ac697b4d2ee0aff570ccb63834);
+            
+        
+
+        marker_8597903ede967abf94e6c3b00b6b8e78.bindPopup(popup_703ba06ea6c0fa6ac69d51a05dedf0cd)
+        ;
+
+        
+    
+    
+                marker_8597903ede967abf94e6c3b00b6b8e78.setIcon(icon_64bba35d9f3624377df2a05acd9ac7c5);
+            
+    
+            var marker_e48b6c517d8bbb5edc10a351d9bbb00c = L.marker(
+                [41.258455, -3.927067],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_c6daa45d66dff88cdbdbc66ca4065bda = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_81a3cff957d908c5d40db4aa9339b45c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eaa71fc773c65b9eb0345e078cd5a093 = $(`<div id="html_eaa71fc773c65b9eb0345e078cd5a093" style="width: 100.0%; height: 100.0%;">Candidato: Base CANTALEJO</div>`)[0];
+                popup_81a3cff957d908c5d40db4aa9339b45c.setContent(html_eaa71fc773c65b9eb0345e078cd5a093);
+            
+        
+
+        marker_e48b6c517d8bbb5edc10a351d9bbb00c.bindPopup(popup_81a3cff957d908c5d40db4aa9339b45c)
+        ;
+
+        
+    
+    
+                marker_e48b6c517d8bbb5edc10a351d9bbb00c.setIcon(icon_c6daa45d66dff88cdbdbc66ca4065bda);
+            
+    
+            var marker_00232e1d7295a8f164e9f6da7ad4aa41 = L.marker(
+                [40.952063, -4.075792],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_a672ccd59f278493a52b40e4edf536bc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_32f466ebf6fb89950343565ff1f42858 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7c4db9da841cbe382ea3c03614f71d2b = $(`<div id="html_7c4db9da841cbe382ea3c03614f71d2b" style="width: 100.0%; height: 100.0%;">Candidato: Base SAN CRISTÓBAL DE SEGOVIA</div>`)[0];
+                popup_32f466ebf6fb89950343565ff1f42858.setContent(html_7c4db9da841cbe382ea3c03614f71d2b);
+            
+        
+
+        marker_00232e1d7295a8f164e9f6da7ad4aa41.bindPopup(popup_32f466ebf6fb89950343565ff1f42858)
+        ;
+
+        
+    
+    
+                marker_00232e1d7295a8f164e9f6da7ad4aa41.setIcon(icon_a672ccd59f278493a52b40e4edf536bc);
+            
+    
+            var marker_1062f8a23310b3fb4bc857ddb83c599a = L.marker(
+                [41.763279, -2.466248],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_deca2930cb3ab2b517898349058677cc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e7084d81ce63636e276712aa9f54f2eb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fdab82367448077c2f0bf106d9190640 = $(`<div id="html_fdab82367448077c2f0bf106d9190640" style="width: 100.0%; height: 100.0%;">Candidato: Base SORIA</div>`)[0];
+                popup_e7084d81ce63636e276712aa9f54f2eb.setContent(html_fdab82367448077c2f0bf106d9190640);
+            
+        
+
+        marker_1062f8a23310b3fb4bc857ddb83c599a.bindPopup(popup_e7084d81ce63636e276712aa9f54f2eb)
+        ;
+
+        
+    
+    
+                marker_1062f8a23310b3fb4bc857ddb83c599a.setIcon(icon_deca2930cb3ab2b517898349058677cc);
+            
+    
+            var marker_93e5158782322b61d200dd7e62be07b7 = L.marker(
+                [41.486994, -2.53291],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_9989bd2322c91a275522231153b09deb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4898f7d4278f47bcb1ce37f6c797c384 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_416b27f12eec7084751ddb86e9e5883b = $(`<div id="html_416b27f12eec7084751ddb86e9e5883b" style="width: 100.0%; height: 100.0%;">Candidato: Base ALMAZÁN</div>`)[0];
+                popup_4898f7d4278f47bcb1ce37f6c797c384.setContent(html_416b27f12eec7084751ddb86e9e5883b);
+            
+        
+
+        marker_93e5158782322b61d200dd7e62be07b7.bindPopup(popup_4898f7d4278f47bcb1ce37f6c797c384)
+        ;
+
+        
+    
+    
+                marker_93e5158782322b61d200dd7e62be07b7.setIcon(icon_9989bd2322c91a275522231153b09deb);
+            
+    
+            var marker_be89bcc15ceedf44fabc5a51ae8374af = L.marker(
+                [41.585776, -3.071508],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_93f3de169b8cece777e964e10518039f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0c72bb48bf53916a1cab7fda3bcb63fd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_46855712ce6abfacba7d0800399de9eb = $(`<div id="html_46855712ce6abfacba7d0800399de9eb" style="width: 100.0%; height: 100.0%;">Candidato: Base BURGO DE OSMA-CIUDAD DE OSMA</div>`)[0];
+                popup_0c72bb48bf53916a1cab7fda3bcb63fd.setContent(html_46855712ce6abfacba7d0800399de9eb);
+            
+        
+
+        marker_be89bcc15ceedf44fabc5a51ae8374af.bindPopup(popup_0c72bb48bf53916a1cab7fda3bcb63fd)
+        ;
+
+        
+    
+    
+                marker_be89bcc15ceedf44fabc5a51ae8374af.setIcon(icon_93f3de169b8cece777e964e10518039f);
+            
+    
+            var marker_37a59e5b7ef847e1463a361496e6e3af = L.marker(
+                [41.780458, -1.982666],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_1ca8f04a6017ec54e85dbdfdab6ee0c2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ef8022f868c34cef7712832433aa34aa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1ddc0137a8003991cbc2c094bea9e615 = $(`<div id="html_1ddc0137a8003991cbc2c094bea9e615" style="width: 100.0%; height: 100.0%;">Candidato: Base ÓLVEGA</div>`)[0];
+                popup_ef8022f868c34cef7712832433aa34aa.setContent(html_1ddc0137a8003991cbc2c094bea9e615);
+            
+        
+
+        marker_37a59e5b7ef847e1463a361496e6e3af.bindPopup(popup_ef8022f868c34cef7712832433aa34aa)
+        ;
+
+        
+    
+    
+                marker_37a59e5b7ef847e1463a361496e6e3af.setIcon(icon_1ca8f04a6017ec54e85dbdfdab6ee0c2);
+            
+    
+            var marker_725ae430a0afce3e5e106c821d22282b = L.marker(
+                [41.85517, -1.919656],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_f98ac6972de8dcfc85efd6ce0b28ba81 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5c403a74ad123f7f29d43f270c3007a3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_731cc08fa6191ccc39c6bae049c7e1b3 = $(`<div id="html_731cc08fa6191ccc39c6bae049c7e1b3" style="width: 100.0%; height: 100.0%;">Candidato: Base ÁGREDA</div>`)[0];
+                popup_5c403a74ad123f7f29d43f270c3007a3.setContent(html_731cc08fa6191ccc39c6bae049c7e1b3);
+            
+        
+
+        marker_725ae430a0afce3e5e106c821d22282b.bindPopup(popup_5c403a74ad123f7f29d43f270c3007a3)
+        ;
+
+        
+    
+    
+                marker_725ae430a0afce3e5e106c821d22282b.setIcon(icon_f98ac6972de8dcfc85efd6ce0b28ba81);
+            
+    
+            var marker_4e81a7ec267e6c13ef21dc12c3fab187 = L.marker(
+                [41.765435, -2.524146],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_7f52f4917e93db4974885b6b2c828a13 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e8767995d824cba1996330548df884b2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_facdf9923307d554bb1a913d0e3eddac = $(`<div id="html_facdf9923307d554bb1a913d0e3eddac" style="width: 100.0%; height: 100.0%;">Candidato: Base GOLMAYO</div>`)[0];
+                popup_e8767995d824cba1996330548df884b2.setContent(html_facdf9923307d554bb1a913d0e3eddac);
+            
+        
+
+        marker_4e81a7ec267e6c13ef21dc12c3fab187.bindPopup(popup_e8767995d824cba1996330548df884b2)
+        ;
+
+        
+    
+    
+                marker_4e81a7ec267e6c13ef21dc12c3fab187.setIcon(icon_7f52f4917e93db4974885b6b2c828a13);
+            
+    
+            var marker_4c58b2752363cc98cb7a41c41f3c201f = L.marker(
+                [41.575287, -3.208325],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_88775db840ffd94f0a6e14efaf994a08 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2868984feca41b5b3807a98ef373a5d6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_589bcdd0eb3cf1edbb16295b3546817e = $(`<div id="html_589bcdd0eb3cf1edbb16295b3546817e" style="width: 100.0%; height: 100.0%;">Candidato: Base SAN ESTEBAN DE GORMAZ</div>`)[0];
+                popup_2868984feca41b5b3807a98ef373a5d6.setContent(html_589bcdd0eb3cf1edbb16295b3546817e);
+            
+        
+
+        marker_4c58b2752363cc98cb7a41c41f3c201f.bindPopup(popup_2868984feca41b5b3807a98ef373a5d6)
+        ;
+
+        
+    
+    
+                marker_4c58b2752363cc98cb7a41c41f3c201f.setIcon(icon_88775db840ffd94f0a6e14efaf994a08);
+            
+    
+            var marker_dcac702f2efcb8d7bb4d747508dc39eb = L.marker(
+                [41.829305, -3.066742],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_a54cabeafac1039d3d3ddcf95c84a808 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fbfbf0c7a959aaa2c4bf74058f9bbec3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_73fe85a4135d0ccbb9dcce08eec17df7 = $(`<div id="html_73fe85a4135d0ccbb9dcce08eec17df7" style="width: 100.0%; height: 100.0%;">Candidato: Base SAN LEONARDO DE YAGÜE</div>`)[0];
+                popup_fbfbf0c7a959aaa2c4bf74058f9bbec3.setContent(html_73fe85a4135d0ccbb9dcce08eec17df7);
+            
+        
+
+        marker_dcac702f2efcb8d7bb4d747508dc39eb.bindPopup(popup_fbfbf0c7a959aaa2c4bf74058f9bbec3)
+        ;
+
+        
+    
+    
+                marker_dcac702f2efcb8d7bb4d747508dc39eb.setIcon(icon_a54cabeafac1039d3d3ddcf95c84a808);
+            
+    
+            var marker_f77a07541355111474c38cb0405b5e68 = L.marker(
+                [41.652328, -4.723349],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_fa8948bdc2619f1176b563c2075fdd37 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_49078aad44998d26eff5bf24059f0de8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3c12576587c20e2fe5c81c3a4e6ce032 = $(`<div id="html_3c12576587c20e2fe5c81c3a4e6ce032" style="width: 100.0%; height: 100.0%;">Candidato: Base VALLADOLID</div>`)[0];
+                popup_49078aad44998d26eff5bf24059f0de8.setContent(html_3c12576587c20e2fe5c81c3a4e6ce032);
+            
+        
+
+        marker_f77a07541355111474c38cb0405b5e68.bindPopup(popup_49078aad44998d26eff5bf24059f0de8)
+        ;
+
+        
+    
+    
+                marker_f77a07541355111474c38cb0405b5e68.setIcon(icon_fa8948bdc2619f1176b563c2075fdd37);
+            
+    
+            var marker_5f20d3911b186c4be80564e928d96ca0 = L.marker(
+                [41.583318, -4.722149],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_a26603c39f2a082f5dc795987e491811 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_571f7d2aff38d23309550ef5bc6ebda0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_47dbca5b51e1aba0777ea38c796cbdfb = $(`<div id="html_47dbca5b51e1aba0777ea38c796cbdfb" style="width: 100.0%; height: 100.0%;">Candidato: Base LAGUNA DE DUERO</div>`)[0];
+                popup_571f7d2aff38d23309550ef5bc6ebda0.setContent(html_47dbca5b51e1aba0777ea38c796cbdfb);
+            
+        
+
+        marker_5f20d3911b186c4be80564e928d96ca0.bindPopup(popup_571f7d2aff38d23309550ef5bc6ebda0)
+        ;
+
+        
+    
+    
+                marker_5f20d3911b186c4be80564e928d96ca0.setIcon(icon_a26603c39f2a082f5dc795987e491811);
+            
+    
+            var marker_897dcd16f754763862f82663b4005fd0 = L.marker(
+                [41.609108, -4.797806],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_d6efda03c2976fa025465ded38255da8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5f731a82bf56f8b867cbe5dc059e7d1b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f70356eeeae4ef0ffd722a296c7b480d = $(`<div id="html_f70356eeeae4ef0ffd722a296c7b480d" style="width: 100.0%; height: 100.0%;">Candidato: Base ARROYO DE LA ENCOMIENDA</div>`)[0];
+                popup_5f731a82bf56f8b867cbe5dc059e7d1b.setContent(html_f70356eeeae4ef0ffd722a296c7b480d);
+            
+        
+
+        marker_897dcd16f754763862f82663b4005fd0.bindPopup(popup_5f731a82bf56f8b867cbe5dc059e7d1b)
+        ;
+
+        
+    
+    
+                marker_897dcd16f754763862f82663b4005fd0.setIcon(icon_d6efda03c2976fa025465ded38255da8);
+            
+    
+            var marker_84df7223e9dd01197345ffcb1a076295 = L.marker(
+                [41.307578, -4.915187],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_97eb5306c99b2c8175312b9851cca5f4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a70572a698b8f556ba66ae53ceeceefb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2bdd09aee38bd79879ae9a0fd13db337 = $(`<div id="html_2bdd09aee38bd79879ae9a0fd13db337" style="width: 100.0%; height: 100.0%;">Candidato: Base MEDINA DEL CAMPO</div>`)[0];
+                popup_a70572a698b8f556ba66ae53ceeceefb.setContent(html_2bdd09aee38bd79879ae9a0fd13db337);
+            
+        
+
+        marker_84df7223e9dd01197345ffcb1a076295.bindPopup(popup_a70572a698b8f556ba66ae53ceeceefb)
+        ;
+
+        
+    
+    
+                marker_84df7223e9dd01197345ffcb1a076295.setIcon(icon_97eb5306c99b2c8175312b9851cca5f4);
+            
+    
+            var marker_343bcda21e9e743e24b63930d2f833e4 = L.marker(
+                [41.612284, -4.685702],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_20e7a6ce5882c460f7069e2d987cfa9e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d4c5b40fc43f6061f0c316bb8a544a2d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7e9052ce927a7ba23edaecd63b8162c8 = $(`<div id="html_7e9052ce927a7ba23edaecd63b8162c8" style="width: 100.0%; height: 100.0%;">Candidato: Base CISTÉRNIGA</div>`)[0];
+                popup_d4c5b40fc43f6061f0c316bb8a544a2d.setContent(html_7e9052ce927a7ba23edaecd63b8162c8);
+            
+        
+
+        marker_343bcda21e9e743e24b63930d2f833e4.bindPopup(popup_d4c5b40fc43f6061f0c316bb8a544a2d)
+        ;
+
+        
+    
+    
+                marker_343bcda21e9e743e24b63930d2f833e4.setIcon(icon_20e7a6ce5882c460f7069e2d987cfa9e);
+            
+    
+            var marker_4e364f8070ddc1fefce09a419fbb8db4 = L.marker(
+                [41.584008, -4.58001],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_fcc9e9a5ef2a97b495c1f15c9eaf2a61 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_992583e7564525ec7429b31e32f1c927 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_26c1837f2eaf08cf718f7301a311e3bf = $(`<div id="html_26c1837f2eaf08cf718f7301a311e3bf" style="width: 100.0%; height: 100.0%;">Candidato: Base TUDELA DE DUERO</div>`)[0];
+                popup_992583e7564525ec7429b31e32f1c927.setContent(html_26c1837f2eaf08cf718f7301a311e3bf);
+            
+        
+
+        marker_4e364f8070ddc1fefce09a419fbb8db4.bindPopup(popup_992583e7564525ec7429b31e32f1c927)
+        ;
+
+        
+    
+    
+                marker_4e364f8070ddc1fefce09a419fbb8db4.setIcon(icon_fcc9e9a5ef2a97b495c1f15c9eaf2a61);
+            
+    
+            var marker_9df63bb40690db0897181509cd49a81b = L.marker(
+                [41.502023, -5.001276],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_7570510f1c19e6b05aab4026d8ee446a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5519567872028b7bf591b4d140820075 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4f7727d56b51f8f5e1960d098fd61ac7 = $(`<div id="html_4f7727d56b51f8f5e1960d098fd61ac7" style="width: 100.0%; height: 100.0%;">Candidato: Base TORDESILLAS</div>`)[0];
+                popup_5519567872028b7bf591b4d140820075.setContent(html_4f7727d56b51f8f5e1960d098fd61ac7);
+            
+        
+
+        marker_9df63bb40690db0897181509cd49a81b.bindPopup(popup_5519567872028b7bf591b4d140820075)
+        ;
+
+        
+    
+    
+                marker_9df63bb40690db0897181509cd49a81b.setIcon(icon_7570510f1c19e6b05aab4026d8ee446a);
+            
+    
+            var marker_c5c7c64123fdf1b16cb643e53278c7df = L.marker(
+                [41.364199, -4.530714],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_fc6a5eadefc3c0733a453333b4e937c5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9194e7512df5fd2a80cbde0abaf04fb0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f60249a5006ea02de17904831f7f883b = $(`<div id="html_f60249a5006ea02de17904831f7f883b" style="width: 100.0%; height: 100.0%;">Candidato: Base ÍSCAR</div>`)[0];
+                popup_9194e7512df5fd2a80cbde0abaf04fb0.setContent(html_f60249a5006ea02de17904831f7f883b);
+            
+        
+
+        marker_c5c7c64123fdf1b16cb643e53278c7df.bindPopup(popup_9194e7512df5fd2a80cbde0abaf04fb0)
+        ;
+
+        
+    
+    
+                marker_c5c7c64123fdf1b16cb643e53278c7df.setIcon(icon_fc6a5eadefc3c0733a453333b4e937c5);
+            
+    
+            var marker_76239b33964c8ef8c89af08e6da1a5ef = L.marker(
+                [41.49914, -5.754948],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_730f0b72cc4e62a6d3d9a769f080fb2d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b1b3d72921dfc79c2d4212098c447079 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b97b13019ef9d49701fa944d15547517 = $(`<div id="html_b97b13019ef9d49701fa944d15547517" style="width: 100.0%; height: 100.0%;">Candidato: Base ZAMORA</div>`)[0];
+                popup_b1b3d72921dfc79c2d4212098c447079.setContent(html_b97b13019ef9d49701fa944d15547517);
+            
+        
+
+        marker_76239b33964c8ef8c89af08e6da1a5ef.bindPopup(popup_b1b3d72921dfc79c2d4212098c447079)
+        ;
+
+        
+    
+    
+                marker_76239b33964c8ef8c89af08e6da1a5ef.setIcon(icon_730f0b72cc4e62a6d3d9a769f080fb2d);
+            
+    
+            var marker_d444c17ccec6ef78e55c517ace5daebd = L.marker(
+                [42.001729, -5.680069],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_9560c845c9bbf0aea050a07cf34fc944 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a94e85a92873bc10b6a47caa4905168b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1d1476993e9d72135cb9cda8e8510299 = $(`<div id="html_1d1476993e9d72135cb9cda8e8510299" style="width: 100.0%; height: 100.0%;">Candidato: Base BENAVENTE</div>`)[0];
+                popup_a94e85a92873bc10b6a47caa4905168b.setContent(html_1d1476993e9d72135cb9cda8e8510299);
+            
+        
+
+        marker_d444c17ccec6ef78e55c517ace5daebd.bindPopup(popup_a94e85a92873bc10b6a47caa4905168b)
+        ;
+
+        
+    
+    
+                marker_d444c17ccec6ef78e55c517ace5daebd.setIcon(icon_9560c845c9bbf0aea050a07cf34fc944);
+            
+    
+            var marker_55b071debf8d572b713267a7a66d452e = L.marker(
+                [41.51991, -5.394642],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_84851303faa1f1c1bcac2d13a9964393 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f44f8ad45cf4a2d9c406f4f0b392a64c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2e142cf61ee1462f630121a0019dc643 = $(`<div id="html_2e142cf61ee1462f630121a0019dc643" style="width: 100.0%; height: 100.0%;">Candidato: Base TORO</div>`)[0];
+                popup_f44f8ad45cf4a2d9c406f4f0b392a64c.setContent(html_2e142cf61ee1462f630121a0019dc643);
+            
+        
+
+        marker_55b071debf8d572b713267a7a66d452e.bindPopup(popup_f44f8ad45cf4a2d9c406f4f0b392a64c)
+        ;
+
+        
+    
+    
+                marker_55b071debf8d572b713267a7a66d452e.setIcon(icon_84851303faa1f1c1bcac2d13a9964393);
+            
+    
+            var marker_bfcd963e6ad97965b049a43560a52324 = L.marker(
+                [41.446216, -5.730921],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_613291503378d8ebf167fe5132ade706 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8be6286e5c82bd30a666d903b5f07d98 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d0888396c4509a65cacea5e77fc67eb2 = $(`<div id="html_d0888396c4509a65cacea5e77fc67eb2" style="width: 100.0%; height: 100.0%;">Candidato: Base MORALES DEL VINO</div>`)[0];
+                popup_8be6286e5c82bd30a666d903b5f07d98.setContent(html_d0888396c4509a65cacea5e77fc67eb2);
+            
+        
+
+        marker_bfcd963e6ad97965b049a43560a52324.bindPopup(popup_8be6286e5c82bd30a666d903b5f07d98)
+        ;
+
+        
+    
+    
+                marker_bfcd963e6ad97965b049a43560a52324.setIcon(icon_613291503378d8ebf167fe5132ade706);
+            
+    
+            var marker_53ceec15dfe2e37a393d14f2e06ccaf4 = L.marker(
+                [41.462369, -5.656529],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_822535654ded8887a70ce55c07091959 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_143d16b3e4724dc0f63d9c9f963014cb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d91d4dfa38e02d81c1233223c02e33e1 = $(`<div id="html_d91d4dfa38e02d81c1233223c02e33e1" style="width: 100.0%; height: 100.0%;">Candidato: Base MORALEJA DEL VINO</div>`)[0];
+                popup_143d16b3e4724dc0f63d9c9f963014cb.setContent(html_d91d4dfa38e02d81c1233223c02e33e1);
+            
+        
+
+        marker_53ceec15dfe2e37a393d14f2e06ccaf4.bindPopup(popup_143d16b3e4724dc0f63d9c9f963014cb)
+        ;
+
+        
+    
+    
+                marker_53ceec15dfe2e37a393d14f2e06ccaf4.setIcon(icon_822535654ded8887a70ce55c07091959);
+            
+    
+            var marker_942502a044553cc05741380250540503 = L.marker(
+                [41.491481, -5.682754],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_470500bc78b57354a82d07be085d1f29 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4fd712c0e9a0d4ed0cdbcfd030f26467 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3c4fef3067e1bcc9c23186d7dec4ef51 = $(`<div id="html_3c4fef3067e1bcc9c23186d7dec4ef51" style="width: 100.0%; height: 100.0%;">Candidato: Base VILLARALBO</div>`)[0];
+                popup_4fd712c0e9a0d4ed0cdbcfd030f26467.setContent(html_3c4fef3067e1bcc9c23186d7dec4ef51);
+            
+        
+
+        marker_942502a044553cc05741380250540503.bindPopup(popup_4fd712c0e9a0d4ed0cdbcfd030f26467)
+        ;
+
+        
+    
+    
+                marker_942502a044553cc05741380250540503.setIcon(icon_470500bc78b57354a82d07be085d1f29);
+            
+    
+            var marker_434ba77a233e3229c7425eabfacbb923 = L.marker(
+                [41.231354, -5.495629],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_f559b0a07d76a4fe28132b17ae5c318e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a0108be65eb2f7e3c93e254c80d814bc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_41455a95bfc91a79928fd9997c518ff6 = $(`<div id="html_41455a95bfc91a79928fd9997c518ff6" style="width: 100.0%; height: 100.0%;">Candidato: Base FUENTESAÚCO</div>`)[0];
+                popup_a0108be65eb2f7e3c93e254c80d814bc.setContent(html_41455a95bfc91a79928fd9997c518ff6);
+            
+        
+
+        marker_434ba77a233e3229c7425eabfacbb923.bindPopup(popup_a0108be65eb2f7e3c93e254c80d814bc)
+        ;
+
+        
+    
+    
+                marker_434ba77a233e3229c7425eabfacbb923.setIcon(icon_f559b0a07d76a4fe28132b17ae5c318e);
+            
+    
+            var marker_6e82975f7a379ad30526346bca5b3258 = L.marker(
+                [41.864879, -5.414703],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_15b04fee72d9f89e208d9f5b17e11a5a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a732e153636086cb148ff84cc1605f11 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_38ae5691ccae12680ad74b497d81e7e5 = $(`<div id="html_38ae5691ccae12680ad74b497d81e7e5" style="width: 100.0%; height: 100.0%;">Candidato: Base VILLALPANDO</div>`)[0];
+                popup_a732e153636086cb148ff84cc1605f11.setContent(html_38ae5691ccae12680ad74b497d81e7e5);
+            
+        
+
+        marker_6e82975f7a379ad30526346bca5b3258.bindPopup(popup_a732e153636086cb148ff84cc1605f11)
+        ;
+
+        
+    
+    
+                marker_6e82975f7a379ad30526346bca5b3258.setIcon(icon_15b04fee72d9f89e208d9f5b17e11a5a);
+            
+    
+            var marker_0fd949fdf07dabc873546cb74fd7e7d4 = L.marker(
+                [42.547681, -6.5973],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_4cf46131f8bebe6db88593ae3ffb3050 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4bc5565c5d47fd8df9a76952f80dc890 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cfe099c213df19fb32fdceff48d149fc = $(`<div id="html_cfe099c213df19fb32fdceff48d149fc" style="width: 100.0%; height: 100.0%;">Candidato: Base PONFERRADA</div>`)[0];
+                popup_4bc5565c5d47fd8df9a76952f80dc890.setContent(html_cfe099c213df19fb32fdceff48d149fc);
+            
+        
+
+        marker_0fd949fdf07dabc873546cb74fd7e7d4.bindPopup(popup_4bc5565c5d47fd8df9a76952f80dc890)
+        ;
+
+        
+    
+    
+                marker_0fd949fdf07dabc873546cb74fd7e7d4.setIcon(icon_4cf46131f8bebe6db88593ae3ffb3050);
+            
+    
+            var marker_2aeb1100203ad906b3360d9708239f8c = L.marker(
+                [42.615067, -6.416706],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_8a9bde26cafe55245ad0a9d7edba1873 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_84f57769545ac93f3d5b2562f3061977 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0a2868df12a5ec64a817bf71d7860721 = $(`<div id="html_0a2868df12a5ec64a817bf71d7860721" style="width: 100.0%; height: 100.0%;">Candidato: Base BEMBIBRE</div>`)[0];
+                popup_84f57769545ac93f3d5b2562f3061977.setContent(html_0a2868df12a5ec64a817bf71d7860721);
+            
+        
+
+        marker_2aeb1100203ad906b3360d9708239f8c.bindPopup(popup_84f57769545ac93f3d5b2562f3061977)
+        ;
+
+        
+    
+    
+                marker_2aeb1100203ad906b3360d9708239f8c.setIcon(icon_8a9bde26cafe55245ad0a9d7edba1873);
+            
+    
+            var marker_dd43f8d64eeed63c5a8225ba48225d97 = L.marker(
+                [42.599569, -6.725968],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_3194396fae50152463bdc31d436a7359 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_36dca6c97b5c973abaa1dcde291dc82d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fa53be1e79cb7184c14ec05c4d18a544 = $(`<div id="html_fa53be1e79cb7184c14ec05c4d18a544" style="width: 100.0%; height: 100.0%;">Candidato: Base CACABELOS</div>`)[0];
+                popup_36dca6c97b5c973abaa1dcde291dc82d.setContent(html_fa53be1e79cb7184c14ec05c4d18a544);
+            
+        
+
+        marker_dd43f8d64eeed63c5a8225ba48225d97.bindPopup(popup_36dca6c97b5c973abaa1dcde291dc82d)
+        ;
+
+        
+    
+    
+                marker_dd43f8d64eeed63c5a8225ba48225d97.setIcon(icon_3194396fae50152463bdc31d436a7359);
+            
+    
+            var marker_dcbd1b799244b8ca4edd0b762669c05a = L.marker(
+                [42.763088, -6.628094],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_01369945eb0f2281cdd009d014eeab16 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_657322c40b5baea86a5a5c3497ca74c5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_444c845375af0b90d562f7e1b2fcfbc2 = $(`<div id="html_444c845375af0b90d562f7e1b2fcfbc2" style="width: 100.0%; height: 100.0%;">Candidato: Base FABERO</div>`)[0];
+                popup_657322c40b5baea86a5a5c3497ca74c5.setContent(html_444c845375af0b90d562f7e1b2fcfbc2);
+            
+        
+
+        marker_dcbd1b799244b8ca4edd0b762669c05a.bindPopup(popup_657322c40b5baea86a5a5c3497ca74c5)
+        ;
+
+        
+    
+    
+                marker_dcbd1b799244b8ca4edd0b762669c05a.setIcon(icon_01369945eb0f2281cdd009d014eeab16);
+            
+    
+            var marker_363a25c3de41e699ecf1ac1338d9dc10 = L.marker(
+                [42.605994, -6.810821],
+                {
+}
+            ).addTo(map_17f6a81e69a2ca1ab4954d7771bc8000);
+        
+    
+            var icon_ac997a19c29d7af702a8680be4b4602c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "helicopter",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_62c284261e51728a5d4c1e6b571b831b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5527044056de14ddd86c6387281152e3 = $(`<div id="html_5527044056de14ddd86c6387281152e3" style="width: 100.0%; height: 100.0%;">Candidato: Base VILLAFRANCA DEL BIERZO</div>`)[0];
+                popup_62c284261e51728a5d4c1e6b571b831b.setContent(html_5527044056de14ddd86c6387281152e3);
+            
+        
+
+        marker_363a25c3de41e699ecf1ac1338d9dc10.bindPopup(popup_62c284261e51728a5d4c1e6b571b831b)
+        ;
+
+        
+    
+    
+                marker_363a25c3de41e699ecf1ac1338d9dc10.setIcon(icon_ac997a19c29d7af702a8680be4b4602c);
+            
+</script>
+</html>

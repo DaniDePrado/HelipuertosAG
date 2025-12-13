@@ -2,40 +2,60 @@ import pandas as pd
 import os
 import sys
 
-# Importamos todos tus módulos
+
 try:
     import datos
     import modelo
-    # IMPORTANTE: Importamos el generador para ejecutarlo aquí
     import generar_candidatos_masivos 
 except ImportError as e:
     sys.exit(f"Error crítico de importación: {e}. Asegúrate de estar en la raíz del proyecto.")
+# Mapa inical
+try:
+    from analisis_inicial import generar_analisis_previo
+except ImportError:
+    def generar_analisis_previo(): print("   (Saltando análisis inicial...)")
+
+try:
+    from visualizacion import generar_mapas_y_graficos
+except ImportError:
+    def generar_mapas_y_graficos(r): print(f"   (No se pueden generar mapas para {r})")
 
 def main():
     print("=========================================================")
-    print("     PROYECTO HELICYL: EJECUCIÓN MAESTRA (AUTO)          ")
+    print("     PROYECTO HELICYL: EJECUCIÓN                         ")
     print("=========================================================")
 
-    print("\n Generando candidatos estratégicos...") #Aqui vamos a generar los candidatos
+    # ANÁLISIS PREVIO 
+    print("\nGenerando mapas de análisis inicial (ANTES)...")
+    try:
+        generar_analisis_previo()
+    except Exception as e:
+        print(f" Aviso: No se pudo generar el análisis previo ({e})")
+        print("(Esto no afecta al cálculo del modelo, continuamos...)")
+
+    # GENERACIÓN DE CANDIDATOS 
+    print("\n Generando candidatos estratégicos...") 
     try:
         generar_candidatos_masivos.generar_masivos()
         print(" Candidatos generados correctamente.")
     except Exception as e:
-        print(f" Alerta: No se pudieron regenerar candidatos ({e}).")
-        print(f" Intentando usar el archivo 'candidatos.csv' existente...")
+        print(f"Alerta: No se pudieron regenerar candidatos ({e}).")
 
-    print("\n Cargando datos del sistema...") #Con esto conseguimos cargar los datos al sistema
+    # CARGA DE DATOS
+    print("\nCargando datos del sistema...") 
     try:
         df_mun, df_cand = datos.cargar_datos()
     except Exception as e:
-        print(f"Error en datos: {e}")
+        print(f"Error fatal en datos: {e}")
         return
 
-    print("\n Calculando matriz de tiempos de vuelo...") #Creamos una matriz de tiempos, para ser capaces de ver los tiempos
+    # MATRIZ DE TIEMPOS 
+    print("\n Calculando matriz de tiempos de vuelo...") 
     tiempos = datos.generar_matriz_tiempos(df_mun, df_cand)
     
-    print("\n Optimizando escenarios...") #Evaluamos en algunos escenarios
-    #Por eficiencia, algo que sea mas equilibrado entre tiempo y area a cubrir, y por ultima equidad es decir, a todos se la da lo que necesiten
+    # OPTIMIZACIÓN DE ESCENARIOS 
+    print("Optimizando escenarios (A, B, C)...") 
+    
     escenarios = [
         {"nombre": "A_Eficiencia", "w_t": 1.0, "w_c": 0.0},
         {"nombre": "B_Equilibrado", "w_t": 0.5, "w_c": 0.5},
@@ -43,12 +63,13 @@ def main():
     ]
     
     resumen_global = []
-    ruta_data = os.path.dirname(df_cand.iloc[0].name) if hasattr(df_cand, 'name') else "data"
-    if not os.path.exists(ruta_data): ruta_data = "data"
+    if not os.path.exists("data"):
+        os.makedirs("data")
 
     for esc in escenarios:
-        print(f"Procesando: {esc['nombre']}...")
+        print(f"\n   --- Procesando Escenario: {esc['nombre']} ---")
         
+        # 1. Ejecutar el modelo matemático
         bases, df_res = modelo.resolver_modelo(
             df_mun, df_cand, tiempos, 
             peso_tiempo=esc['w_t'], 
@@ -57,17 +78,46 @@ def main():
         )
         
         if not bases:
-            print(f"Fallo en {esc['nombre']}")
+            print(f"Fallo al resolver {esc['nombre']}")
             continue
             
-        df_final = df_res.merge(df_mun[['id', 'municipio', 'poblacion']], left_on='municipio_id', right_on='id')
-        df_final = df_final.merge(df_cand[['id', 'nombre', 'region']], left_on='base_asignada_id', right_on='id', suffixes=('_mun', '_base'))
+        df_final = df_res.merge(
+            df_mun[['id', 'municipio', 'poblacion', 'lat', 'lon']], 
+            left_on='municipio_id', right_on='id'
+        )
+        df_final = df_final.merge(
+            df_cand[['id', 'nombre', 'lat', 'lon']], #
+            left_on='base_asignada_id', right_on='id', 
+            suffixes=('_mun', '_base')
+        )
         
-        fichero = os.path.join("data", f"solucion_{esc['nombre']}.csv")
-        df_final.to_csv(fichero, index=False, sep=';', encoding='utf-8')
-        
-        t_medio = df_final['tiempo_minutos'].mean()
+        # 3. TRADUCIR COLUMNAS 
+        df_final = df_final.rename(columns={
+            'lat_mun': 'lat_muni',
+            'lon_mun': 'lon_muni',
+            'lat_base': 'lat_heli',
+            'lon_base': 'lon_heli',
+            'nombre': 'helipuerto_nombre'
+        })
 
+        # Calculamos distancia aprox si no existe
+        if 'distancia_km' not in df_final.columns:
+             df_final['distancia_km'] = (df_final['tiempo_minutos'] / 60) * 220
+
+        # Guardar CSV
+        fichero = os.path.join("data", f"solucion_{esc['nombre']}.csv")
+        df_final.to_csv(fichero, index=False, sep=',', encoding='utf-8')
+        print(f" Solución guardada en: {fichero}")
+        
+        # 4. VISUALIZACIÓN
+        print(f"Generando mapas visuales...")
+        try:
+            generar_mapas_y_graficos(fichero)
+        except Exception as e:
+            print(f"Error visualización: {e}")
+
+        # 5. Estadísticas
+        t_medio = df_final['tiempo_minutos'].mean()
         pob_cubierta = df_final[df_final['tiempo_minutos'] <= 15]['poblacion'].sum()
         pct_cobertura = (pob_cubierta / df_final['poblacion'].sum()) * 100
         
@@ -78,17 +128,17 @@ def main():
             "Bases Seleccionadas": len(bases)
         })
 
-    print("\n Generando informe comparativo...") #Creamos el informe final
+    # INFORME FINAL 
+    print("\nGenerando informe comparativo...") 
     if resumen_global:
         df_resumen = pd.DataFrame(resumen_global)
         ruta_resumen = os.path.join("data", "INFORME_COMPARATIVA.csv")
         df_resumen.to_csv(ruta_resumen, index=False, sep=';')
         
         print("\n" + "="*45)
-        print(" RESUMEN DE RESULTADOS (Listo para entregar)")
+        print(" RESUMEN DE RESULTADOS")
         print("="*45)
         print(df_resumen[['Escenario', 'Tiempo Medio (min)', 'Cobertura <15min (%)']].to_string(index=False))
-        print("\n Ejecución completada con éxito.")
     else:
         print(" No se generaron resultados.")
 
